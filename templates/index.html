@@ -1,224 +1,228 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta charset="utf-8" />
-	<title>{{ "Welcome!"|t('app') }}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-	<meta name="referrer" content="origin-when-cross-origin" />
-	<style>
-		html,
-		body {
-			font-size: 16px;
-			-webkit-text-size-adjust: 100%;
-			height: 100%;
-			font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-		}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <style>
+        html,
+        body {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
 
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: hsl(212, 10%, 93%);
-			display: flex;
-		}
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: hsl(212, 10%, 93%);
+            color: hsl(212, 20%, 20%);
+            display: flex;
+        }
 
-		h1 {
-			margin-top: 0;
-		}
+        h1 {
+            margin-top: 0;
+        }
 
-		h2 {
-			margin-top: 24px;
-			font-size: 1em;
-		}
+        h2 {
+            margin-top: 24px;
+            font-size: 1em;
+        }
 
-		h2:first-child {
-			margin-top: 0;
-		}
+        h2:first-child {
+            margin-top: 0;
+        }
 
-		p {
-			line-height: 1.5em;
-			margin-bottom: 2em;
-		}
+        p {
+            line-height: 1.4em;
+            margin-bottom: 1.4em;
+        }
 
-		ul {
-			line-height: 1.3em;
-			padding-left: 20px;
-			margin-bottom: 0;
-		}
+        ul {
+            line-height: 1.3em;
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
 
-		ul li {
-			margin-bottom: 0.25em;
-		}
+        ul li {
+            margin-bottom: 0.35em;
+        }
 
-		a {
-			color: #0d78f2;
-			text-decoration: none;
-		}
+        a {
+            color: #0d78f2;
+            text-decoration: none;
+        }
 
-		a:hover {
-			text-decoration: underline;
-		}
-		
-		small {
-			color: #777;
-		}
+        a:hover {
+            text-decoration: underline;
+        }
 
-		#container {
-			flex-grow: 1;
-		}
+        .go {
+            color: #0d78f2;
+        }
 
-		#modal {
-			background: #fff;
-		}
+        .go:after {
+            padding-left: 4px;
+            content: '→';
+            text-decoration: none !important;
+        }
 
-		#aside {
-			background: hsl(212, 10%, 93%);
-		}
+        small {
+            color: #777;
+        }
 
-		.content {
-			padding: 35px;
-			padding-left: calc(35px + env(safe-area-inset-left));
-			padding-right: calc(35px + env(safe-area-inset-right));
-		}
+        code {
+            display: inline-block;
+            color: #da513d;
+            padding: 0 2px;
+            background: hsl(212, 10%, 96%);
+            border-radius: 3px;
+            line-height: 1.3;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 0.9em;
+        }
 
-		.btn {
-			border-radius: 2px;
-			padding: 6px 12px;
-			font-size: 1em;
-		}
+        #container {
+            flex-grow: 1;
+        }
 
-		.btn.submit {
-			background-image: linear-gradient(#da5a47, #cc5643);
-			color: #fff;
-			text-decoration: none;
-			-webkit-font-smoothing: antialiased;
-			font-weight: 500;
-			box-shadow: inset 0 0 0 1px transparent, 0 0 0 1px rgba(0, 0, 0, 0.025), 0 1px 1px rgba(0, 0, 0, 0.1);
-		}
+        #modal {
+            background: #fff;
+        }
 
-		.btn.submit:hover {
-			background-image: linear-gradient(#bf503f, #b34b3b);
-		}
+        #aside {
+            background: hsl(212, 10%, 93%);
+        }
 
-		.btn.submit:active {
-			background-image: linear-gradient(#8c3b2e, #994032);
-		}
+        .content {
+            padding: 35px;
+            padding-left: calc(35px + env(safe-area-inset-left));
+            padding-right: calc(35px + env(safe-area-inset-right));
+        }
 
-		@media (min-width:480px) {
-			body {
-				background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-1920.png') }}");
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center center;
-			}
+        @media (min-width:480px) {
+            body {
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-1920.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
 
-			#container {
-				display: flex;
-				align-items: normal;
-				justify-content: normal;
-			}
-		}
+            #container {
+                display: flex;
+                align-items: normal;
+                justify-content: normal;
+            }
+        }
 
-		@media (min-width:480px) and (min-height: 376px) {
-			#container {
-				padding: 24px;
-				align-items: center;
-				justify-content: center;
-			}
+        @media (min-width:480px) and (min-height: 376px) {
+            #container {
+                padding: 24px;
+                align-items: center;
+                justify-content: center;
+            }
 
-			#modal {
-				height: 100%;
-				max-width: 770px;
-				max-height: 510px;
-				border-radius: 4px;
-				overflow: auto;
-				box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-			}
+            #modal {
+                height: 100%;
+                max-width: 770px;
+                max-height: 510px;
+                border-radius: 4px;
+                overflow: auto;
+                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+            }
 
-			#aside {
-				background: #f9f9f9;
-				overflow: auto;
-			}
-		}
+            #aside {
+                background: #f9f9f9;
+                overflow: auto;
+            }
+        }
 
-		@media (min-width:768px) {
-			#modal {
-				display: flex;
-			}
+        @media (min-width:768px) {
+            #modal {
+                display: flex;
+            }
 
-			#main {
-				width: 70%;
-				overflow: auto;
-			}
+            #main {
+                width: 50%;
+                overflow: auto;
+            }
 
-			#aside {
-				flex-grow: 1;
-				overflow: auto;
-			}
-		}
+            #aside {
+                width: 50%;
+                overflow: auto;
+            }
+        }
 
-		@media only screen and (min-width: 1921px) {
-			body {
-				background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
-			}
-		}
+        @media only screen and (min-width: 1921px) {
+            body {
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
+            }
+        }
 
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 961px),
-		only screen and (-moz-min-device-pixel-ratio: 1.5) and (min-width: 961px),
-		only screen and (-o-min-device-pixel-ratio: 3/2) and (min-width: 961px),
-		only screen and (min-device-pixel-ratio: 1.5) and (min-width: 961px),
-		only screen and (min-resolution: 1.5dppx) and (min-width: 961px) {
-			body {
-				background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
-			}
-		}
-	</style>
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 961px),
+        only screen and (-moz-min-device-pixel-ratio: 1.5) and (min-width: 961px),
+        only screen and (-o-min-device-pixel-ratio: 3/2) and (min-width: 961px),
+        only screen and (min-device-pixel-ratio: 1.5) and (min-width: 961px),
+        only screen and (min-resolution: 1.5dppx) and (min-width: 961px) {
+            body {
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
+            }
+        }
+    </style>
 </head>
 <body class="ltr">
-	<div id="container">
-		<div id="modal">
-			<div id="main">
-				<div class="content">
-					<h1>{{ "Welcome!"|t('app') }}</h1>
-					<p>{{ "It’s true, this site doesn’t have a whole lot of content yet, but don’t worry. Our web developers have just installed the CMS, and they’re setting things up for the content editors this very moment. Soon this site will be an oasis of fresh perspectives, sharp analyses, and astute opinions that will keep you coming back again and again."|t('app') }}</p>
+<div id="container">
+    <div id="modal">
+        <div id="main">
+            <div class="content">
+                <h1>Welcome</h1>
+                <p>Thanks for installing Craft CMS!</p>
+                <p>You’re looking at the <code>index.html</code> template file located in your
+                    <code>templates/</code> folder. Once you’re ready to start building out your site’s
+                    front end, you can replace this with something custom.</p>
+                <p>If you’re new to Craft CMS, take some time to check out the resources on the right
+                    when you get a chance&mdash;especially
+                    <a href="https://craftcms.com/community#slack" target="_blank">Slack</a>
+                    and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
+                    The Craft community is full of smart, friendly, and helpful people!</p>
+                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your Control Panel</a></span></p>
+            </div>
+        </div>
+        <div id="aside">
+            <div class="content">
+                {% set officialResources = [
+                    { label: "Craft 3 Documentation", url: 'http://docs.craftcms.com/v3/' },
+                    { label: "Craft 3 Class Reference", url: 'https://docs.craftcms.com/api/v3/' },
+                    { label: "Craft 3 Plugins", url: 'https://plugins.craftcms.com' },
+                    { label: "Demo site", url: 'https://demo.craftcms.com/' },
+                    { label: "Craft Slack", url: 'https://craftcms.com/community#slack' },
+                    { label: "Craft CMS Stack Exchange", url: 'http://craftcms.stackexchange.com/' },
+                ] %}
+                <h2>Official Resources</h2>
+                <ul>
+                    {% for resource in officialResources %}
+                        <li><a href="{{ resource.url }}" title="{{ resource.label }}" target="_blank">{{ resource.label }}</a></li>
+                    {% endfor %}
+                </ul>
 
-					<div class="buttons">
-						<a href="{{ cpUrl('') }}" class="btn submit">{{ "Control Panel"|t('app') }}</a>
-					</div>
-				</div>
-			</div>
-			<div id="aside">
-				<div class="content">
-					{% set officialResources = [
-						{ label: "Craft 3 Documentation", url: 'https://github.com/craftcms/docs' },
-						{ label: "Craft 3 Class Reference", url: 'https://docs.craftcms.com/api/v3/' },
-						{ label: "Craft 3 Plugins", url: 'https://plugins.craftcms.com' },
-						{ label: "Demo site", url: 'https://demo.craftcms.com/' },
-						{ label: "Craft Slack", url: 'https://craftcms.com/community#slack' },
-						{ label: "Craft CMS Stack Exchange", url: 'http://craftcms.stackexchange.com/' },
-					] %}
-					<h2>{{ "Official Resources"|t('app') }}</h2>
-					<ul>
-						{% for resource in officialResources %}
-							<li><a href="{{ resource.url }}" title="{{ resource.label }}" target="_blank">{{ resource.label }}</a></li>
-						{% endfor %}
-					</ul>
-
-					{% set communityResources = [
-						{ label: "Mijingo", description: "Video courses and learning resources", url: 'https://mijingo.com/craft' },
-						{ label: "Envato Tuts+", description: "Video courses", url: 'https://webdesign.tutsplus.com/categories/craft-cms/courses' },
-						{ label: "Straight Up Craft", description: "Articles, tutorials, and more", url: 'http://straightupcraft.com/' },
-						{ label: "pluginfactory.io", description: "Craft plugin scaffold generator", url: 'https://pluginfactory.io/' },
-					] %}
-					<h2>{{ "Community Resources"|t('app') }}</h2>
-					<ul>
-						{% for resource in communityResources %}
-							<li><a href="{{ resource.url }}" title="{{ resource.label }} – {{ resource.description }}" target="_blank">{{ resource.label }}</a><small> – {{ resource.description }}</small></li>
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+                {% set communityResources = [
+                    { label: "Mijingo", description: "Video courses and other learning resources", url: 'https://mijingo.com/craft' },
+                    { label: "Envato Tuts+", description: "Video courses", url: 'https://webdesign.tutsplus.com/categories/craft-cms/courses' },
+                    { label: "Straight Up Craft", description: "Articles, tutorials, and more", url: 'http://straightupcraft.com/' },
+                    { label: "pluginfactory.io", description: "Craft plugin and module scaffold generator", url: 'https://pluginfactory.io/' },
+                ] %}
+                <h2>Community Resources</h2>
+                <ul>
+                    {% for resource in communityResources %}
+                        <li><a href="{{ resource.url }}" title="{{ resource.label }} – {{ resource.description }}" target="_blank">{{ resource.label }}</a><small> – {{ resource.description }}</small></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
