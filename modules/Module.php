@@ -27,7 +27,9 @@ class Module extends \yii\base\Module
      */
     public function init()
     {
+        // Set a @modules alias pointed to the modules/ directory
         Craft::setAlias('@modules', __DIR__);
+
         parent::init();
 
         // Custom initialization code goes here...
