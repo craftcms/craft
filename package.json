@@ -4,7 +4,13 @@
   "description": "Base craft install for ODC projects",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "NODE_ENV=development blendid",
+    "build": "NODE_ENV=production blendid build"
+  },
+  "engines": {
+    "node": ">=6.11.1",
+    "npm": ">=3.10.3"
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,25 @@
   "bugs": {
     "url": "https://github.com/onedesign/craft/issues"
   },
-  "homepage": "https://github.com/onedesign/craft#readme"
+  "homepage": "https://github.com/onedesign/craft#readme",
+  "eslint": {
+    "extends": "odc"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 2%",
+    "ie >= 11"
+  ],
+  "dependencies": {
+    "blendid": "^4.4.3",
+    "dotenv": "^6.0.0",
+    "normalize.css": "^8.0.0",
+    "sass-mq": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^5.0.0",
+    "eslint-config-odc": "^1.1.0",
+    "eslint-plugin-react": "^7.9.1"
+  }
 }
