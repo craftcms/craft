@@ -1,0 +1,19 @@
+{
+  "name": "odc-craft-base",
+  "version": "1.0.0",
+  "description": "Base craft install for ODC projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onedesign/craft.git"
+  },
+  "author": "One Design Company <dev@onedesigncompany.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onedesign/craft/issues"
+  },
+  "homepage": "https://github.com/onedesign/craft#readme"
+}
