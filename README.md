@@ -9,7 +9,11 @@ This is a starter project for Craft 3 projects at [One Design Company](https://o
 ## Getting Started
 To create a project using this repo as a base, open up your favorite terminal and run:
 ```
-$ composer create-project onedesign/craft --repository git@github.com:onedesign/craft.git ./project-name && cd project-name && npm install
+composer create-project onedesign/craft \
+  --repository "{ \"type\": \"vcs\", \"url\": \"https://github.com/onedesign/craft.git\" }" \
+  ./project-name \
+  dev-master && \
+  cd project-name
 ```
 
 That will take a little bit, and output a bunch of junk to your console. When it's complete run:
