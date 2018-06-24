@@ -1,14 +1,50 @@
-<p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
+# ODC Craft Starter
 
-## About Craft CMS
+This is a starter project for Craft 3 projects at [One Design Company](https://onedesigncompany.com).
 
-Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike. It is optimized for bespoke web and application development, offering developers a clean slate to build out exactly what they want, rather than wrestling with a theme.
+## Requirements
+- Composer
+- Node / NPM
 
-Learn more about Craft at [craftcms.com](https://craftcms.com).
+## Getting Started
+To create a project using this repo as a base, open up your favorite terminal and run:
+```
+$ composer create-project onedesign/craft --repository git@github.com:onedesign/craft.git ./project-name && cd project-name && npm install
+```
 
-## How to Install Craft 3
+That will take a little bit, and output a bunch of junk to your console. When it's complete run:
+```
+$ ./craft setup
+```
+**NOTE**
+If you're using MAMP as your local server of choice, the above command won't work. You have two options. First, you can copy the `.env.example` file in the repo and edit values on your own (be sure to generate a security key) OR you can point the command at your active version of PHP and run it that way. On macOS that looks something like
+```
+$ /Applications/MAMP/bin/php/{ACTIVE_PHP_VERSION}/bin/php ./craft setup
+```
+Be sure to replace `ACTIVE_PHP_VERSION` in the above with the version MAMP is currently using. At the time of writing it's probably either `php7.1.12` or `php7.2.1`
 
-See the Craft 3 documentation for [installation](https://docs.craftcms.com/v3/installation.html) and [updating](https://docs.craftcms.com/v3/updating.html) instructions.
+To configure your craft instance. The CLI will ask you a few questions and then will ask if you'd like to install Craft now or later, feel free to choose whichever option you'd like.
+
+### Generating a Security Key
+TODO
+
+## Front End
+On the front end of things we're currently opting for [Blendid](https://github.com/vigetlabs/blendid) primarily in order to get a userful starter project up as fast as possible. If you're not familiar with Blendid you'll want to [read their wiki](https://github.com/vigetlabs/blendid/wiki) to get a better understanding of how it's put together and what you can do to customize it.
+
+We've made a few customizations to it off the bat:
+- Add [normalize.css](https://necolas.github.io/normalize.css/) to the main CSS file
+- Add [sass-mq](https://github.com/sass-mq/sass-mq) for easier media queryin'
+- Set our autoprefixer browsers
+- Provide jQuery to all modules
+
+## Included Plugins:
+- [Craft 3 Asset Rev](https://github.com/clubstudioltd/craft3-asset-rev)
+- [AWS S3 Asset Source](https://github.com/craftcms/aws-s3)
+- [Typogrify](https://github.com/nystudio107/craft-typogrify)
+- [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
+
+**NOTE**
+Plugins are not installed or activated through this process. You'll have to go into the admin and install them after creating a project
 
 ## Resources
 
