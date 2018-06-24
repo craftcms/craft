@@ -43,8 +43,8 @@
     ],
     "post-create-project-cmd": [
       "@composer dump-autoload -o",
-      "@php craft setup/welcome",
-      "npm install"
+      "npm install",
+      "@php craft setup/welcome"
     ]
   }
 }
