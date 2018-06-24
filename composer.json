@@ -20,7 +20,11 @@
   },
   "require": {
     "craftcms/cms": "^3.0.0",
-    "vlucas/phpdotenv": "^2.4.0"
+    "vlucas/phpdotenv": "^2.4.0",
+    "clubstudioltd/craft-asset-rev": "^6.0",
+    "craftcms/aws-s3": "^1.0",
+    "nystudio107/craft-typogrify": "^1.1",
+    "topshelfcraft/environment-label": "^3.1"
   },
   "autoload": {
     "psr-4": {
