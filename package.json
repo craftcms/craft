@@ -4,7 +4,6 @@
   "description": "Base craft install for ODC projects",
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "start": "NODE_ENV=development blendid",
     "build": "NODE_ENV=production blendid build"
   },
