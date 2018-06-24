@@ -18,7 +18,8 @@ composer create-project onedesign/craft \
   --remove-vcs \
   ./project-name \
   dev-master && \
-  cd project-name
+  cd project-name && \
+  git init
 ```
 
 That will take a little bit, and output a bunch of junk to your console. When it's complete run:
