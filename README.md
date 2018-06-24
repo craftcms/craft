@@ -22,22 +22,30 @@ composer create-project onedesign/craft \
   git init
 ```
 
-That will take a little bit, and output a bunch of junk to your console. When it's complete run:
+That will take a little bit, and output a bunch of junk to your console. The command is doing a few things:
+1. Grabbing this repo, cloning it (without history) into the `project-name` folder as well as running composer install
+2. Running `npm install` in the newly created directory
+3. Navigating you into the newly created directory
+4. Initializing an empty git repo for the project
+
+When `creact-project` is done doing all that, run:
 ```
 $ ./craft setup
 ```
-**NOTE**
+
+This command will ask you question about your environment (mysql vs. postgres, databse user, database password, etc.), basically it will create a `.env` file with your answers which is why you're going to want to have your database created before hand. Otherwise, it will complain that it can't connect to the database. After asking all the .env questions, it will ask if you'd like to install Craft now or later, feel free to do whichever you'd like.
+
+If you don't want to use the setup command, just copy the `.env.example` file to a `.env` file and replace the values with your local environment configuration. Just be sure to add a random string to the `SECURITY_KEY` variable.
+
+**NOTE:**
 If you're using MAMP as your local server of choice, the above command won't work. You have two options. First, you can copy the `.env.example` file in the repo and edit values on your own (be sure to generate a security key) OR you can point the command at your active version of PHP and run it that way. On macOS that looks something like
 ```
 $ /Applications/MAMP/bin/php/{ACTIVE_PHP_VERSION}/bin/php ./craft setup
 ```
 Be sure to replace `ACTIVE_PHP_VERSION` in the above with the version MAMP is currently using. At the time of writing it's probably either `php7.1.12` or `php7.2.1`
 
-To configure your craft instance. The CLI will ask you a few questions and then will ask if you'd like to install Craft now or later, feel free to choose whichever option you'd like.
-
 ### Generating a Security Key
 Internally Craft uses `Craft::$app->getSecurity()->generateRandomString()` to generate the `SECURITY_KEY`. We could probably create a script that would hook into this and generate a key if people don't want to run `./craft setup` but for now we recommend running the setup script.
-
 
 ## Front End
 On the front end of things we're currently opting for [Blendid](https://github.com/vigetlabs/blendid) primarily in order to get a userful starter project up as fast as possible. If you're not familiar with Blendid you'll want to [read their wiki](https://github.com/vigetlabs/blendid/wiki) to get a better understanding of how it's put together and what you can do to customize it.
