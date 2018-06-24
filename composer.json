@@ -44,6 +44,7 @@
     "post-create-project-cmd": [
       "@composer dump-autoload -o",
       "npm install",
+      "git init",
       "@php craft setup/welcome"
     ]
   }
