@@ -1,0 +1,31 @@
+{#
+ # =========================================================
+ # Layout template
+ # =========================================================
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+
+
+{# --------------------------------------------------------- #}
+{# Output
+{# --------------------------------------------------------- #}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include '_partials/head' %}
+</head>
+
+<body class="{{ bodyClass | default('') }}">
+  {% block content %}{% endblock %}
+
+  <script src="{{ rev('scripts/common.bundle.js') }}"></script>
+  <script src="{{ rev('scripts/main.bundle.js') }}"></script>
+</body>
+</html>
