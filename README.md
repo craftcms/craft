@@ -35,7 +35,8 @@ Be sure to replace `ACTIVE_PHP_VERSION` in the above with the version MAMP is cu
 To configure your craft instance. The CLI will ask you a few questions and then will ask if you'd like to install Craft now or later, feel free to choose whichever option you'd like.
 
 ### Generating a Security Key
-TODO
+Internally Craft uses `Craft::$app->getSecurity()->generateRandomString()` to generate the `SECURITY_KEY`. We could probably create a script that would hook into this and generate a key if people don't want to run `./craft setup` but for now we recommend running the setup script.
+
 
 ## Front End
 On the front end of things we're currently opting for [Blendid](https://github.com/vigetlabs/blendid) primarily in order to get a userful starter project up as fast as possible. If you're not familiar with Blendid you'll want to [read their wiki](https://github.com/vigetlabs/blendid/wiki) to get a better understanding of how it's put together and what you can do to customize it.
