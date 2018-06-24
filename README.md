@@ -11,6 +11,7 @@ To create a project using this repo as a base, open up your favorite terminal an
 ```
 composer create-project onedesign/craft \
   --repository "{ \"type\": \"vcs\", \"url\": \"https://github.com/onedesign/craft.git\" }" \
+  --remove-vcs \
   ./project-name \
   dev-master && \
   cd project-name
