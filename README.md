@@ -7,6 +7,8 @@ This is a starter project for Craft 3 projects at [One Design Company](https://o
 - Node / NPM
 
 ## Getting Started
+Before getting too far you should set up your database and virtual host so you have all the info you need to connect to things later.
+
 To create a project using this repo as a base, open up your favorite terminal and run:
 ```
 composer create-project onedesign/craft \
