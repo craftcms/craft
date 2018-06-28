@@ -19,6 +19,7 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
+    "php": "^7.0",
     "craftcms/cms": "^3.0.0",
     "vlucas/phpdotenv": "^2.4.0"
   },
@@ -28,10 +29,7 @@
     }
   },
   "config": {
-    "optimize-autoloader": true,
-    "platform": {
-      "php": "7.0"
-    }
+    "optimize-autoloader": true
   },
   "scripts": {
     "post-root-package-install": [
