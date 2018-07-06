@@ -13,8 +13,8 @@ Before getting too far you should set up your database and virtual host so you h
 
 To create a project using this repo as a base, open up your favorite terminal and run:
 ```
-composer create-project onedesign/craft \
-  --repository "{ \"type\": \"vcs\", \"url\": \"https://github.com/onedesign/craft.git\" }" \
+composer create-project onedesign/craft-starter \
+  --repository "{ \"type\": \"vcs\", \"url\": \"https://github.com/onedesign/craft-starter.git\" }" \
   --remove-vcs \
   ./project-name \
   dev-master && \
