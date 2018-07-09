@@ -1,0 +1,16 @@
+// =============================================================================
+// Sass MQ
+// =============================================================================
+
+$mq-breakpoints: (
+  small: 500px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1280px
+);
+
+// displays the currently active breakpoint in the top right corner
+// remove this if you don't want it there, or if you only want it to appear
+// for certain breakpoints, replace it with a list of those breakpoints
+// e.g. (small, large, xlarge)
+$mq-show-breakpoints: map-keys($mq-breakpoints);

@@ -1,5 +1,5 @@
 {
-  "name": "craftcms/craft",
+  "name": "onedesign/craft",
   "description": "Craft CMS",
   "keywords": [
     "craft",
@@ -19,8 +19,21 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
+    "php": "^7.1",
+    "ext-imagick": "*",
+    "ext-gd": "*",
+    "ext-mbstring": "*",
+    "ext-mcrypt": "*",
+    "ext-redis": "*",
     "craftcms/cms": "^3.0.0",
-    "vlucas/phpdotenv": "^2.4.0"
+    "vlucas/phpdotenv": "^2.4.0",
+    "clubstudioltd/craft-asset-rev": "^6.0",
+    "craftcms/aws-s3": "^1.0",
+    "nystudio107/craft-typogrify": "^1.1",
+    "topshelfcraft/environment-label": "^3.1"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
   },
   "autoload": {
     "psr-4": {
@@ -30,7 +43,7 @@
   "config": {
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.1"
     }
   },
   "scripts": {
@@ -39,6 +52,7 @@
     ],
     "post-create-project-cmd": [
       "@composer dump-autoload -o",
+      "npm install",
       "@php craft setup/welcome"
     ]
   }
