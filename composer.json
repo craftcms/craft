@@ -34,10 +34,12 @@
     }
   },
   "scripts": {
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
     "post-create-project-cmd": [
+      "@php -r \"copy('.env.example', '.env');\"",
+      "@php -r \"unlink('composer.json');\"",
+      "@php -r \"unlink('LICENSE.md');\"",
+      "@php -r \"unlink('README.md');\"",
+      "@php -r \"rename('composer.json.default', 'composer.json');\"",
       "@composer dump-autoload -o",
       "@php craft setup/welcome"
     ]
