@@ -193,32 +193,21 @@
         </div>
         <div id="aside">
             <div class="content">
-                {% set officialResources = [
-                    { label: "Craft 3 Documentation", url: 'http://docs.craftcms.com/v3/' },
-                    { label: "Craft 3 Class Reference", url: 'https://docs.craftcms.com/api/v3/' },
-                    { label: "Craft 3 Plugins", url: 'https://plugins.craftcms.com' },
-                    { label: "Demo site", url: 'https://demo.craftcms.com/' },
-                    { label: "Craft Slack", url: 'https://craftcms.com/community#slack' },
-                    { label: "Craft CMS Stack Exchange", url: 'http://craftcms.stackexchange.com/' },
-                ] %}
                 <h2>Official Resources</h2>
-                <ul>
-                    {% for resource in officialResources %}
-                        <li><a href="{{ resource.url }}" title="{{ resource.label }}" target="_blank">{{ resource.label }}</a></li>
-                    {% endfor %}
-                </ul>
+				<ul>
+					<li><a href="http://docs.craftcms.com/v3/" target="_blank">Craft 3 Documentation</a></li>
+					<li><a href="https://docs.craftcms.com/api/v3/" target="_blank">Craft 3 Class Reference</a></li>
+					<li><a href="https://demo.craftcms.com/" target="_blank">Demo site</a></li>
+					<li><a href="https://craftcms.com/community#slack" target="_blank">Craft Slack</a></li>
+					<li><a href="https://craftcommerce.com/" target="_blank">Craft Commerce</a> <small>– First-party e-commerce platform for Craft.</small></li>
+				</ul>
 
-                {% set communityResources = [
-                    { label: "Mijingo", description: "Video courses and other learning resources", url: 'https://mijingo.com/craft' },
-                    { label: "Envato Tuts+", description: "Video courses", url: 'https://webdesign.tutsplus.com/categories/craft-cms/courses' },
-                    { label: "Straight Up Craft", description: "Articles, tutorials, and more", url: 'http://straightupcraft.com/' },
-                    { label: "pluginfactory.io", description: "Craft plugin and module scaffold generator", url: 'https://pluginfactory.io/' },
-                ] %}
                 <h2>Community Resources</h2>
                 <ul>
-                    {% for resource in communityResources %}
-                        <li><a href="{{ resource.url }}" title="{{ resource.label }} – {{ resource.description }}" target="_blank">{{ resource.label }}</a><small> – {{ resource.description }}</small></li>
-                    {% endfor %}
+					<li><a href="https://craftquest.io/" target="_blank">CraftQuest</a> <small>– Unlimited access to Craft training (and more) from Mijingo.</small></li>
+					<li><a href="https://webdesign.tutsplus.com/categories/craft-cms/courses" target="_blank">Envato Tuts+</a> <small>– Video courses.</small></li>
+					<li><a href="http://straightupcraft.com/" target="_blank">nystudio107 Blog</a> <small>– Articles about Craft and modern web development.</small></li>
+					<li><a href="http://craftcms.stackexchange.com/" target="_blank">Craft CMS Stack Exchange</a> <small>– Community-run Q&A for Craft developers.</small></li>
                 </ul>
             </div>
         </div>
