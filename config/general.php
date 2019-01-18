@@ -26,7 +26,7 @@ return [
 
     // Dev environment settings
     'dev' => [
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
+        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
     ],
 ];
