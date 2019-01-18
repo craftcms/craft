@@ -22,11 +22,27 @@ return [
 
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
+
+        // Whether to save the project config out to config/project.yaml
+        // (see https://docs.craftcms.com/v3/project-config.html)
+        'useProjectConfigFile' => true,
     ],
 
     // Dev environment settings
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+    ],
+
+    // Staging environment settings
+    'staging' => [
+        // Prevent administrative changes from being made on staging
+        'allowAdminChanges' => false,
+    ],
+
+    // Production environment settings
+    'production' => [
+        // Prevent administrative changes from being made on production
+        'allowAdminChanges' => false,
     ],
 ];
