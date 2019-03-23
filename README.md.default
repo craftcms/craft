@@ -1,0 +1,37 @@
+Project Name
+============
+
+
+
+Requirements
+------------
+- PHP 7+
+- composer
+- MySQL / MariaDB / PostgreSQL
+- Node.js (dev)
+- Gulp (dev)
+
+
+
+Install
+-------
+
+1.  Create a .env file by duplicating `.env.example` and
+    filling in the appropriate environment specific values
+
+2.  Run `composer install`
+
+
+
+Development
+-----------
+
+1.  Run `cd assets`
+
+2.  Run `npm install`
+
+3.  Run `gulp`
+
+4.  To migrate content from the production server —
+    - Import the Craft MySQL database
+    - Import the content inside `public/media` folder
