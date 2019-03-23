@@ -21,6 +21,10 @@ Install
 
 2.  Run `composer install`
 
+3.  Use appropriate config file based on the server software.
+    Eg. if using Apache, duplicate `serverconfigs/apache-dev/sample.htacces`
+    into `web/.htacces`.
+
 
 
 Development
