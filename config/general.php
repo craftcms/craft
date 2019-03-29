@@ -36,13 +36,13 @@ return [
 
     // Staging environment settings
     'staging' => [
-        // Prevent administrative changes from being made on staging
+        // Set this to `false` to prevent administrative changes from being made on staging
         'allowAdminChanges' => true,
     ],
 
     // Production environment settings
     'production' => [
-        // Prevent administrative changes from being made on production
+        // Set this to `false` to prevent administrative changes from being made on production
         'allowAdminChanges' => true,
     ],
 ];
