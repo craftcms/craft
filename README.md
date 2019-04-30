@@ -1,3 +1,35 @@
+<img src="https://cdn.miranj.in/mc3/img/apple-touch-icon-precomposed.png">
+
+## Miranj Craft Boilerplate
+
+This is [Miranj's](https://miranj.in) Craft CMS boilerplate. It includes:
+
+* Server configuration files for Apache and nginx that enable clean URLs and high performance.
+* A Craft CMS configuration that lets many configuration details be controlled by [environment variables](https://en.wikipedia.org/wiki/Environment_variable),
+and sets the rest to the standards used at Miranj.
+* A [gulp](https://gulpjs.com/) based build process that uses [Tailwind CSS](https://tailwindcss.com/docs/what-is-tailwind/)
+with easy custom configuration of styling.
+* Miranj's preferred Craft plugins, as well as custom configurations for the same:
+    - [Minify](https://github.com/nystudio107/craft-minify)
+    - [Imager](https://github.com/aelvan/Imager-Craft)
+    - [Expanded Singles](https://github.com/verbb/expanded-singles)
+    - [Redactor](https://github.com/craftcms/redactor)
+    - [Inventory](https://github.com/doublesecretagency/craft-inventory)
+    - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
+    - [Typogrify](https://github.com/nystudio107/craft-typogrify)
+    - [Relabel](https://github.com/Anubarak/craft-relabel)
+* Miranj's preferred JS utilities:
+    - [PJAX](https://github.com/MoOx/pjax)
+    - [lazySizes](https://github.com/aFarkas/lazysizes)
+    - [Web Font Loader](https://github.com/typekit/webfontloader)
+* And lastly our template hierarchy and organization.
+
+More documentation to come.
+
+Original Craft CMS documentation follows:
+
+
+
 <p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
 
 ## About Craft CMS 
