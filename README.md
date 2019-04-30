@@ -18,6 +18,7 @@ with easy custom configuration of styling.
     - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
     - [Typogrify](https://github.com/nystudio107/craft-typogrify)
     - [Relabel](https://github.com/Anubarak/craft-relabel)
+    - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
 * Miranj's preferred JS utilities:
     - [PJAX](https://github.com/MoOx/pjax)
     - [lazySizes](https://github.com/aFarkas/lazysizes)
