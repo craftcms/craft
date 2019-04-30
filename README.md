@@ -19,6 +19,7 @@ with easy custom configuration of styling.
     - [Typogrify](https://github.com/nystudio107/craft-typogrify)
     - [Relabel](https://github.com/Anubarak/craft-relabel)
     - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
+    - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)
 * Miranj's preferred JS utilities:
     - [PJAX](https://github.com/MoOx/pjax)
     - [lazySizes](https://github.com/aFarkas/lazysizes)
