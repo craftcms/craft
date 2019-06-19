@@ -1,0 +1,29 @@
+version: '3.1'
+services:
+  app:
+    image: craftcms
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    volumes:
+      - .:/var/www/html:cached
+    env_file: .env
+  db:
+    image: postgres:11-alpine
+    ports:
+      - 54320:5432
+    environment:
+      POSTGRES_ROOT_PASSWORD: SuperPassword123456!
+      POSTGRES_DB: dev_craftcms
+      POSTGRES_USER: craftcms
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - db_data:/var/lib/postgresql/data
+  redis:
+    image: redis
+    ports:
+     - 63790:6379
+volumes:
+  db_data:
