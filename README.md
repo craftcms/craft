@@ -2,30 +2,26 @@
 
 <br>
 
-## About Craft CMS 
+## About Craft CMS
 
-Craft is a flexible and scalable CMS for creating bespoke digital experiences on the web and beyond.
+Craft is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
 
 It features:
 
-- An intuitive Control Panel for administration tasks and content creation.
-- A clean-slate approach to content modeling and [front-end development](https://docs.craftcms.com/v3/dev/).
+- An intuitive, user-friendly control panel for content creation and administrative tasks.
+- A clean-slate approach to content modeling that doesn’t make any assumptions about the content you need to manage.
+- An auto-generated [GraphQL API](https://docs.craftcms.com/v3/graphql.html) that can be consumed for building headless applications.
+- A fast and flexible [templating system](https://docs.craftcms.com/v3/dev/) based on Twig for building traditional websites.
+- A powerful [ecommerce platform](https://craftcms.com/commerce) for building bespoke ecommerce experiences.
 - A built-in Plugin Store with hundreds of free and commercial [plugins](https://plugins.craftcms.com/).
 - A robust framework for [module and plugin development](https://docs.craftcms.com/v3/extend/).
+- An active, vibrant [community](https://craftcms.com/community).
 
-Learn more about it at [craftcms.com](https://craftcms.com).
+You can learn more about it at [craftcms.com](https://craftcms.com), and documentation is available at [docs.craftcms.com](https://docs.craftcms.com/v3/).
 
 ## Tech Specs
 
-Craft is written in PHP (7+), and built on the [Yii 2 framework](https://www.yiiframework.com/). It can connect to MySQL (5.5+) and PostgreSQL (9.5+) for content storage.
-
-## Installation
-
-See the following documentation pages for help installing Craft 3:
-
-- [Server Requirements](https://docs.craftcms.com/v3/requirements.html)
-- [Installation Instructions](https://docs.craftcms.com/v3/installation.html)
-- [Upgrading from Craft 2](https://docs.craftcms.com/v3/upgrade.html)
+Craft is a self-hosted PHP 7 application. It can connect to MySQL and PostgreSQL for content storage. See [Server Requirements](https://docs.craftcms.com/v3/requirements.html) for more details.
 
 ## Popular Resources
 
