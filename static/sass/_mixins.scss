@@ -1,0 +1,111 @@
+@mixin font-body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin font-header {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin header-preset-1 {
+  @include font-header;
+  font-size: rem(24px);
+  line-height: 1.4;
+  font-weight: $weight-bold;
+
+  @include media(">sm") {
+  }
+}
+
+// Figma: primary large
+@mixin header-preset-2 {
+  @include font-header;
+  font-size: rem(22px);
+  line-height: 1.4;
+  font-weight: $weight-bold;
+
+  @include media(">sm") {
+  }
+}
+
+@mixin header-preset-3 {
+  @include font-header;
+  font-size: rem(20px);
+  line-height: 1.4;
+  font-weight: $weight-bold;
+
+  @include media(">sm") {
+  }
+}
+
+@mixin header-preset-4 {
+  @include font-header;
+  font-size: rem(18px);
+  line-height: 1.4;
+  font-weight: $weight-bold;
+
+  @include media(">sm") {
+  }
+}
+
+@mixin header-preset-5 {
+  @include font-header;
+  font-size: rem(16px);
+  line-height: 1.4;
+  font-weight: $weight-bold;
+
+  @include media(">sm") {
+  }
+}
+
+@mixin text-preset-1 {
+  @include font-body;
+  font-size: rem(18px);
+  line-height: 1.3;
+
+  @include media(">sm") {
+  }
+}
+
+@mixin text-preset-2 {
+  @include font-body;
+  font-size: rem(16px);
+  line-height: 1.3;
+
+  @include media(">sm") {
+  }
+}
+
+@mixin text-preset-3 {
+  @include font-body;
+  font-size: rem(14px);
+  line-height: 1.3;
+
+  @include media(">sm") {
+  }
+}
+
+@mixin button-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-item-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin clickable {
+  transition: transform 10ms linear;
+
+  &:active {
+    transform: translate3d(1px, 1px, 0);
+  }
+}

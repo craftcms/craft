@@ -1,0 +1,19 @@
+{
+    "buttons": [
+      "html",
+      "formatting",
+      "bold",
+      "italic",
+      "underline",
+      "unorderedlist",
+      "orderedlist",
+      "link"
+    ],
+    "formatting": ["p", "h2", "h3", "h4"],
+    "imageResizable": true,
+    "linkNewTab": true,
+    "toolbarFixed": true,
+    "removeNewLines": false,
+    "plugins": ["inlinestyle", "fullscreen", "table"]
+  }
+  

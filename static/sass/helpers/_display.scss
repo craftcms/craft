@@ -1,0 +1,27 @@
+.show-xs {
+  display: block;
+}
+
+.hide-xs {
+  display: none;
+}
+
+@include media(">sm") {
+  .show-sm {
+    display: block;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+}
+
+@include media(">md") {
+  .show-md {
+    display: block;
+  }
+
+  .hide-md {
+    display: none;
+  }
+}

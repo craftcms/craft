@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  padding-left: $container-gutter;
+  padding-right: $container-gutter;
+  width: 100%;
+
+  @include media(">=lg") {
+    width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.container--no-overflow {
+  overflow: hidden;
+}
+
+.container-fluid {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container-offset {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(">=md") {
+    width: 100%;
+    max-width: calc(50% + #{$container-width / 2});
+  }
+}
+
+.container-offset--double {
+  @include media(">=md") {
+    max-width: calc(50% + #{$container-width / 1.5});
+  }
+}
+
+.container-offset--third {
+  @include media(">=lg") {
+    max-width: calc(50% + #{$container-width / 3});
+  }
+}
+
+.container-offset--quarter {
+  @include media(">=md") {
+    max-width: calc(50% + #{$container-width / 4});
+  }
+}

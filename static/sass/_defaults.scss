@@ -1,0 +1,97 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /**
+  * Set 1rem = 16px via 62.5%
+  * https://engageinteractive.co.uk/blog/em-vs-rem-vs-px
+  */
+  font-size: 62.5%;
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  /**
+   * Box-sizing reset
+   * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+   */
+  box-sizing: border-box;
+
+  /**
+   * Web font replacement
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
+   */
+  font-display: swap;
+}
+
+body {
+  @include font-body;
+}
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5 {
+}
+
+h1 {
+  @include header-preset-1;
+}
+
+h2 {
+  @include header-preset-2;
+}
+
+h3 {
+  @include header-preset-3;
+}
+
+h4 {
+  @include header-preset-4;
+}
+
+h5 {
+  @include header-preset-5;
+}
+
+p {
+  @include text-preset-2;
+}
+
+small {
+  @include text-preset-3;
+}
+
+input[type="submit"] {
+}
+
+a {
+}
+
+a:focus,
+a:hover {
+}
+
+a:focus {
+}
+
+button {
+}
+
+address {
+}
+
+::placeholder {
+}
+
+:-ms-input-placeholder {
+}
+
+::-ms-input-placeholder {
+}

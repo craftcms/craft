@@ -1,0 +1,302 @@
+// Alabaster
+.bgcolor-xs-alabaster {
+  background-color: $color-alabaster;
+}
+
+@include media(">=sm") {
+  .bgcolor-sm-alabaster {
+    background-color: $color-alabaster;
+  }
+}
+
+@include media(">=md") {
+  .bgcolor-md-alabaster {
+    background-color: $color-alabaster;
+  }
+}
+
+@include media(">=lg") {
+  .bgcolor-lg-alabaster {
+    background-color: $color-alabaster;
+  }
+}
+
+@include media(">=xl") {
+  .bgcolor-xl-alabaster {
+    background-color: $color-alabaster;
+  }
+}
+
+// Bunker
+.bgcolor-xs-bunker {
+  background-color: $color-bunker;
+}
+
+@include media(">=sm") {
+  .bgcolor-sm-bunker {
+    background-color: $color-bunker;
+  }
+}
+
+@include media(">=md") {
+  .bgcolor-md-bunker {
+    background-color: $color-bunker;
+  }
+}
+
+@include media(">=lg") {
+  .bgcolor-lg-bunker {
+    background-color: $color-bunker;
+  }
+}
+
+@include media(">=xl") {
+  .bgcolor-xl-bunker {
+    background-color: $color-bunker;
+  }
+}
+
+// White
+.bgcolor-xs-white {
+  background-color: #ffffff;
+}
+
+@include media(">=sm") {
+  .bgcolor-sm-white {
+    background-color: #ffffff;
+  }
+}
+
+@include media(">=md") {
+  .bgcolor-md-white {
+    background-color: #ffffff;
+  }
+}
+
+@include media(">=lg") {
+  .bgcolor-lg-white {
+    background-color: #ffffff;
+  }
+}
+
+@include media(">=xl") {
+  .bgcolor-xl-white {
+    background-color: #ffffff;
+  }
+}
+
+// Half white
+.bgcolor-xs-50-white {
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 50%,
+    #ffffff 50%
+  );
+}
+
+@include media(">=sm") {
+  .bgcolor-sm-50-white {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 50%,
+      #ffffff 50%
+    );
+  }
+}
+
+@include media(">=md") {
+  .bgcolor-md-50-white {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 50%,
+      #ffffff 50%
+    );
+  }
+}
+
+@include media(">=lg") {
+  .bgcolor-lg-50-white {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 50%,
+      #ffffff 50%
+    );
+  }
+}
+
+@include media(">=xl") {
+  .bgcolor-xl-50-white {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 50%,
+      #ffffff 50%
+    );
+  }
+}
+
+// Half bunker
+.bgcolor-xs-50-bunker {
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    $color-bunker 50%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+@include media(">=sm") {
+  .bgcolor-sm-50-bunker {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      $color-bunker 50%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  }
+}
+
+@include media(">=md") {
+  .bgcolor-md-50-bunker {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 50%,
+      $color-bunker 50%
+    );
+  }
+}
+
+@include media(">=lg") {
+  .bgcolor-lg-50-bunker {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 50%,
+      $color-bunker 50%
+    );
+  }
+}
+
+@include media(">=xl") {
+  .bgcolor-xl-50-bunker {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 50%,
+      $color-bunker 50%
+    );
+  }
+}
+
+// 66% alabaster
+.bgcolor-xs-66-alabaster {
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    $color-alabaster 66%,
+    rgba(255, 255, 255, 0) 33%
+  );
+}
+
+@include media(">=sm") {
+  .bgcolor-sm-66-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      $color-alabaster 66%,
+      rgba(255, 255, 255, 0) 33%
+    );
+  }
+}
+
+@include media(">=md") {
+  .bgcolor-md-66-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 33%,
+      $color-alabaster 66%
+    );
+  }
+}
+
+@include media(">=lg") {
+  .bgcolor-lg-66-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 33%,
+      $color-alabaster 66%
+    );
+  }
+}
+
+@include media(">=xl") {
+  .bgcolor-xl-66-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 33%,
+      $color-bunker 66%
+    );
+  }
+}
+
+// 75% alabaster
+.bgcolor-xs-75-alabaster {
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    $color-alabaster 75%,
+    rgba(255, 255, 255, 0) 33%
+  );
+}
+
+@include media(">=sm") {
+  .bgcolor-sm-75-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      $color-alabaster 75%,
+      rgba(255, 255, 255, 0) 33%
+    );
+  }
+}
+
+@include media(">=md") {
+  .bgcolor-md-75-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 33%,
+      $color-alabaster 75%
+    );
+  }
+}
+
+@include media(">=lg") {
+  .bgcolor-lg-75-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 33%,
+      $color-alabaster 75%
+    );
+  }
+}
+
+@include media(">=xl") {
+  .bgcolor-xl-75-alabaster {
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 33%,
+      $color-bunker 75%
+    );
+  }
+}

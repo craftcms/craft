@@ -1,0 +1,7 @@
+@function em($pixels, $context) {
+  @return ($pixels / $context) * 1em;
+}
+
+@function rem($pixels) {
+  @return ($pixels / 10px) * 1rem;
+}

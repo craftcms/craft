@@ -1,0 +1,38 @@
+/**
+ * Creates common margin and padding helpers similar to Bootstrap
+ *
+ * For example:
+ * 
+ * .mt-xs-140
+ * .ml-lg-n20 (negative margin)
+ * .pt-md-40
+ **/
+$spacings: 0, 20, 30, 40, 60, 100, 140, 180, 240, 360;
+$directions: "left", "right", "top", "bottom";
+
+@mixin calcSpacing($breakpoint) {
+  @each $direction in $directions {
+    @each $value in $spacings {
+      .m#{str-slice($direction, 0, 1)}-#{$breakpoint}-#{$value} {
+        margin-#{$direction}: #{$value}px;
+      }
+      .m#{str-slice($direction, 0, 1)}-#{$breakpoint}-n#{$value} {
+        position: relative;
+        margin-#{$direction}: -#{$value}px;
+      }
+      .p#{str-slice($direction, 0, 1)}-#{$breakpoint}-#{$value} {
+        padding-#{$direction}: #{$value}px;
+      }
+    }
+  }
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @if $breakpoint != "xs" {
+    @include media(">=#{$breakpoint}") {
+      @include calcSpacing($breakpoint);
+    }
+  } @else {
+    @include calcSpacing("xs");
+  }
+}
