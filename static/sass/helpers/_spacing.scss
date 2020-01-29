@@ -1,98 +1,38 @@
-$margins: (
-  "top": (
-    0,
-    25,
-    30,
-    35
-  ),
-  "right": (),
-  "bottom": (
-    20,
-    25,
-    30,
-    35
-  ),
-  "left": ()
-);
+/**
+ * Creates common margin and padding helpers similar to Bootstrap
+ *
+ * For example:
+ * 
+ * .mt-xs-140
+ * .ml-lg-n20 (negative margin)
+ * .pt-md-40
+ **/
+$spacings: 0, 20, 30, 40, 60, 100, 140, 180, 240, 360;
+$directions: "left", "right", "top", "bottom";
 
-$paddings: (
-  "top": (
-    30,
-    40,
-    50,
-    60
-  ),
-  "right": (
-    20,
-    30,
-    60
-  ),
-  "bottom": (
-    30,
-    40,
-    50,
-    60,
-    80
-  ),
-  "left": (
-    20,
-    30,
-    60
-  )
-);
-
-// xs
-
-@each $side, $values in $margins {
-  @each $value in $values {
-    .m#{str-slice($side, 0, 1)}-xs-#{$value} {
-      margin-#{$side}: #{$value}px;
-    }
-  }
-}
-
-@each $side, $values in $paddings {
-  @each $value in $values {
-    .p#{str-slice($side, 0, 1)}-xs-#{$value} {
-      padding-#{$side}: #{$value}px;
-    }
-  }
-}
-
-// sm
-
-@include media(">sm") {
-  @each $side, $values in $margins {
-    @each $value in $values {
-      .m#{str-slice($side, 0, 1)}-sm-#{$value} {
-        margin-#{$side}: #{$value}px;
+@mixin calcSpacing($breakpoint) {
+  @each $direction in $directions {
+    @each $value in $spacings {
+      .m#{str-slice($direction, 0, 1)}-#{$breakpoint}-#{$value} {
+        margin-#{$direction}: #{$value}px;
       }
-    }
-  }
-  @each $side, $values in $paddings {
-    @each $value in $values {
-      .p#{str-slice($side, 0, 1)}-sm-#{$value} {
-        padding-#{$side}: #{$value}px;
+      .m#{str-slice($direction, 0, 1)}-#{$breakpoint}-n#{$value} {
+        position: relative;
+        margin-#{$direction}: -#{$value}px;
+      }
+      .p#{str-slice($direction, 0, 1)}-#{$breakpoint}-#{$value} {
+        padding-#{$direction}: #{$value}px;
       }
     }
   }
 }
 
-// md
-
-@include media(">md") {
-  @each $side, $values in $margins {
-    @each $value in $values {
-      .m#{str-slice($side, 0, 1)}-md-#{$value} {
-        margin-#{$side}: #{$value}px;
-      }
+@each $breakpoint, $value in $breakpoints {
+  @if $breakpoint != "xs" {
+    @include media(">=#{$breakpoint}") {
+      @include calcSpacing($breakpoint);
     }
-  }
-  @each $side, $values in $paddings {
-    @each $value in $values {
-      .p#{str-slice($side, 0, 1)}-md-#{$value} {
-        padding-#{$side}: #{$value}px;
-      }
-    }
+  } @else {
+    @include calcSpacing("xs");
   }
 }

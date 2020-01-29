@@ -50,9 +50,7 @@ let paths = (function () {
 let vendors = [
   "lazysizes",
   "lazysizes/plugins/object-fit/ls.object-fit",
-  "lazysizes/plugins/unveilhooks/ls.unveilhooks",
-  "validate.js/validate.js",
-  "tippy.js"
+  "lazysizes/plugins/unveilhooks/ls.unveilhooks"
 ];
 
 /**

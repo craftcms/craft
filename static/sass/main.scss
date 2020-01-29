@@ -1,6 +1,5 @@
 @import "normalize.css/normalize";
 @import "include-media/dist/include-media";
-@import "tippy.js/dist/tippy";
 
 @import "breakpoints";
 @import "functions";
@@ -15,3 +14,9 @@
 
 @import "helpers/display";
 @import "helpers/spacing";
+@import "helpers/alignment";
+@import "helpers/bgcolors";
+@import "helpers/containers";
+@import "helpers/grid";
+@import "helpers/height";
+@import "helpers/layers";

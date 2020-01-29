@@ -1,10 +1,11 @@
 {
-  "name": "{{ domain }}",
+  "name": "{{ repo }}",
   "version": "1.0.0",
-  "description": "",
+  "description": "{{ description }}",
+  "license": "proprietary",
   "repository": {
     "type": "git",
-    "url": "https://github.com/weareferal/{{ domain }}.git"
+    "url": "https://github.com/weareferal/{{ repo }}.git"
   },
   "homepage": "{{ domain }}",
   "dependencies": {

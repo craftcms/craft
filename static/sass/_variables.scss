@@ -12,6 +12,10 @@ $breakpoints: (
 
 $container-width: 1140px;
 $container-gutter: 20px;
+$grid-gutter-width: 20px;
+$grid-gutter-compensation: -$grid-gutter-width * 0.5;
+$grid-half-gutter-width: $grid-gutter-width * 0.5;
+$grid-outer-margin: $grid-half-gutter-width;
 
 $nav-topbar-xs-height: 64px;
 $nav-topbar-sm-height: 83px;
