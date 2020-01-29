@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "^3.0.0",
+    "craftcms/cms": "^3.4.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {
