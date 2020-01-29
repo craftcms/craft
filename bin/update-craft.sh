@@ -5,3 +5,5 @@ composer install --ignore-platform-reqs --no-interaction --optimize-autoloader
 ./craft migrate/all
 ./craft project-config/sync
 ./craft clear-caches/all
+./craft asset-versioner/scan
+

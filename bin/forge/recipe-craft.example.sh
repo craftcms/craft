@@ -39,7 +39,6 @@ install_nginx_extras () {
 }
 
 perform_craftcms_server_setup () {
-
   # Check if the user is root
   user="$(id -un 2>/dev/null || true)"
   if [ "$user" != 'root' ]; then

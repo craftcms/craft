@@ -1,0 +1,49 @@
+{% extends "_root.twig" %}
+
+{%- block htmlPage -%}
+    <!DOCTYPE html>
+    <html class="fonts-loaded" lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+        {% block headTag %}<head>{% endblock headTag %}
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+            <meta name="referrer" content="origin-when-cross-origin" />
+            <link rel="icon" href="/images/favicon.ico?v=1.0"> 
+            {% block headContent %}
+                {% block headMeta %}
+                    {% hook "seo" %}
+                {% endblock headMeta %}
+                {% block headLinks %}{% endblock headLinks %}
+                {% block headJs %}{% endblock headJs %}
+            
+                <style>
+                    [v-cloak] {display: none !important;}
+                    {% block headCss %}{% endblock headCss %}
+                </style>
+            
+                <link rel="stylesheet" href="{{ '/css/styles.min.css' | version }}" />
+            {% endblock headContent %}
+        </head>
+        <body data-component="body" class="{% block bodyClasses %}{% endblock %}">
+            {% block bodyContent %}{% endblock bodyContent %}
+            <script type="text/javascript" src="{{ '/js/vendor.min.js' | version }}"></script>
+            <script type="text/javascript" src="{{ '/js/scripts.min.js' | version }}"></script>
+
+            {% if bugherdId %}
+                <script async src="https://www.bugherd.com/sidebarv2.js?apikey={{ bugherdId }}"></script>
+            {% endif %} 
+
+            {% if googleAnalyticsId %}
+                <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleAnalyticsId }}"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '{{ googleAnalyticsId }}');
+                </script>
+            {% endif %}
+
+            {% block bodyJs %}{% endblock bodyJs %}
+        </body>
+    </html>
+{%- endblock htmlPage -%}

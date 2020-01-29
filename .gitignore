@@ -1,18 +1,3 @@
-# Craft .gitignore
-#
-# Example .gitignore file for Craft CMS projects
-#
-# @author    nystudio107
-# @copyright Copyright (c) 2017 nystudio107
-# @link      https://nystudio107.com/
-# @package   craft-scripts
-# @since     1.1.0
-# @license   MIT
-
-# This file should be renamed to '.gitignore' and placed in your
-# Craft CMS project root directory
-
-# CRAFT ENVIRONMENT
 .env.php
 .env.sh
 .env
@@ -31,6 +16,7 @@ config/license.key
 /public/assets/*
 /web/assets/*
 /web/tmp/*
+/web/versions/*
 
 # IMAGER TRANSFORMS
 /public/imager/*

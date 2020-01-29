@@ -1,0 +1,11 @@
+{% set prefetchUrls = [
+    alias("@volumesBaseUrl"),
+] %}
+
+{% set baseUrl = alias('@volumesBaseUrl') ~ '/' %}
+{% set googleAnalyticsId = getenv('GOOGLE_ANALYTICS_ID') %}
+{% set bugherdId = getenv('BUGHERD_ID') %}
+
+{% spaceless %}
+    {% block htmlPage %}{% endblock %}
+{% endspaceless %}
