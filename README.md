@@ -1,35 +1,16 @@
-<a href="https://craftcms.com/" rel="noopener" target="_blank"><img width="247" height="60" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a>
+<a href="https://weareferal.com" rel="noopener" target="_blank"><img width="247" src="https://weareferal.com/assets/images/feral_logo_master.png" alt="Feral"></a>
 
 <br>
 
-## About Craft CMS
+A custom composer starter project based on the original Craft `craft` repo:
 
-Craft is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
+* https://github.com/craftcms/craft
 
-It features:
+## Gettings Started
 
-- An intuitive, user-friendly control panel for content creation and administrative tasks.
-- A clean-slate approach to content modeling that doesn’t make any assumptions about the content you need to manage.
-- An auto-generated [GraphQL API](https://docs.craftcms.com/v3/graphql.html) that can be consumed for building headless applications.
-- A fast and flexible [templating system](https://docs.craftcms.com/v3/dev/) based on Twig for building traditional websites.
-- A powerful [ecommerce platform](https://craftcms.com/commerce) for building bespoke ecommerce experiences.
-- A built-in Plugin Store with hundreds of free and commercial [plugins](https://plugins.craftcms.com/).
-- A robust framework for [module and plugin development](https://docs.craftcms.com/v3/extend/).
-- An active, vibrant [community](https://craftcms.com/community).
+Create your new project:
 
-You can learn more about it at [craftcms.com](https://craftcms.com), and documentation is available at [docs.craftcms.com](https://docs.craftcms.com/v3/).
+```sh
+composer create-project weareferal/craft new-site
+```
 
-## Tech Specs
-
-Craft is a self-hosted PHP 7 application. It can connect to MySQL and PostgreSQL for content storage. See [Server Requirements](https://docs.craftcms.com/v3/requirements.html) for more details.
-
-## Popular Resources
-
-- **[Documentation](http://docs.craftcms.com/v3/)** – Read the official docs.
-- **[Guides](https://craftcms.com/guides)** – Follow along with the official guides.
-- **[#craftcms](https://twitter.com/hashtag/craftcms)** – See the latest tweets about Craft.
-- **[Discord](https://craftcms.com/discord)** – Meet the community.
-- **[Stack Exchange](http://craftcms.stackexchange.com/)** – Get help and help others.
-- **[CraftQuest](https://craftquest.io/)** – Watch unlimited video lessons and courses.
-- **[Craft Link List](http://craftlinklist.com/)** – Stay in-the-know.
-- **[nystudio107 Blog](https://nystudio107.com/blog)** – Learn Craft and modern web development.
