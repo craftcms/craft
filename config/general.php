@@ -25,7 +25,15 @@ return [
 
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => false,
+        'useProjectConfigFile' => true,
+
+        // Always have a trailing slash at the end
+        'addTrailingSlashesToUrls' => true,
+
+        // Remove Craft header
+        'sendPoweredByHeader' => false,
+
+        'enableCsrfProtection' => true,
     ],
 
     // Dev environment settings
@@ -44,5 +52,13 @@ return [
     'production' => [
         // Set this to `false` to prevent administrative changes from being made on production
         'allowAdminChanges' => true,
+
+        'enableTemplateCaching' => true,
+
+        'sameSiteCookieValue' => 'Lax',
+
+        'useSecureCookies' => true,
+
+        'sendPoweredByHeader' => false,
     ],
 ];
