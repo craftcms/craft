@@ -18,8 +18,8 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: hsl(212, 10%, 93%);
-            color: hsl(212, 20%, 20%);
+            background-color: hsl(212, 50%, 93%);
+            color: hsl(209, 18%, 30%);
             display: flex;
         }
 
@@ -52,7 +52,7 @@
         }
 
         a {
-            color: #0d78f2;
+            color: #0B69A3;
             text-decoration: none;
         }
 
@@ -61,7 +61,7 @@
         }
 
         .go {
-            color: #0d78f2;
+            color: #0B69A3;
         }
 
         .go:after {
@@ -71,14 +71,14 @@
         }
 
         small {
-            color: #777;
+            color: hsl(211, 11%, 59%);
         }
 
         code {
             display: inline-block;
-            color: #da513d;
+            color: #EF4E4E;
             padding: 0 2px;
-            background: hsl(212, 10%, 96%);
+            background: hsl(212, 60%, 97%);
             border-radius: 3px;
             line-height: 1.3;
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -94,7 +94,7 @@
         }
 
         #aside {
-            background: hsl(212, 10%, 93%);
+            background: hsl(212, 60%, 97%);
         }
 
         .content {
@@ -104,13 +104,6 @@
         }
 
         @media (min-width:480px) {
-            body {
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-1920.png') }}");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-
             #container {
                 display: flex;
                 align-items: normal;
@@ -119,6 +112,13 @@
         }
 
         @media (min-width:480px) and (min-height: 376px) {
+            body {
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
             #container {
                 padding: 24px;
                 align-items: center;
@@ -135,7 +135,6 @@
             }
 
             #aside {
-                background: #f9f9f9;
                 overflow: auto;
             }
         }
@@ -156,21 +155,6 @@
             }
         }
 
-        @media only screen and (min-width: 1921px) {
-            body {
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
-            }
-        }
-
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 961px),
-        only screen and (-moz-min-device-pixel-ratio: 1.5) and (min-width: 961px),
-        only screen and (-o-min-device-pixel-ratio: 3/2) and (min-width: 961px),
-        only screen and (min-device-pixel-ratio: 1.5) and (min-width: 961px),
-        only screen and (min-resolution: 1.5dppx) and (min-width: 961px) {
-            body {
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
-            }
-        }
     </style>
 </head>
 <body class="ltr">
