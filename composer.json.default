@@ -2,12 +2,11 @@
   "require": {
     "craftcms/cms": "^3.4.0",
     "vlucas/phpdotenv": "^3.4.0",
-    "topshelfcraft/environment-label": "^3.1.0",
-    "verbb/knock-knock": "^1.1.0",
-    "craftcms/redactor": "^2.4.0",
-    "ether/seo": "^3.6.0",
+    "verbb/knock-knock": "^1.2.0",
+    "craftcms/redactor": "^2.6.0",
+    "nystudio107/craft-seomatic": "^3.2.0",
     "nystudio107/craft-typogrify": "^1.1.0",
-    "weareferal/env-sync": "^1.0.0",
+    "weareferal/env-sync": "^1.1.0",
     "weareferal/asset-versioner": "^1.0.0"
   },
   "autoload": {
