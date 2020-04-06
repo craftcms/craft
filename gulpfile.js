@@ -1,32 +1,23 @@
 let gulp = require("gulp"),
   imagemin = require("gulp-imagemin"),
-  jsonSass = require("gulp-json-sass"),
   plumber = require("gulp-plumber"),
-  postcss = require("gulp-postcss"),
   rename = require("gulp-rename"),
-  sass = require("gulp-sass"),
   sourcemaps = require("gulp-sourcemaps"),
   stylelint = require("gulp-stylelint"),
-  uglify = require("gulp-uglify"),
+  uglify = require("gulp-uglifyes"),
   svgSprite = require("gulp-svg-sprite"),
-  prefixer = require("autoprefixer"),
   babelify = require("babelify"),
   browserify = require("browserify"),
   browserSync = require("browser-sync"),
   cssnano = require("cssnano"),
   buffer = require("vinyl-buffer"),
-  source = require("vinyl-source-stream");
-
-/**
- * Notify
- *
- * Show a notification in the browser's corner.
- *
- * @param {*} message
- */
-function notify(message) {
-  browserSync.notify(message);
-}
+  source = require("vinyl-source-stream"),
+  postcss = require("gulp-postcss"),
+  postcssImport = require("postcss-import"),
+  postcssNested = require("postcss-nested"),
+  postcssProperties = require("postcss-custom-properties"),
+  autoprefixer = require("autoprefixer"),
+  tailwindcss = require("tailwindcss");
 
 /**
  * Paths
@@ -38,7 +29,7 @@ let paths = (function () {
   return {
     templates: `${this.basePath}/templates`,
     src: `${this.basePath}/static`,
-    dst: `${this.basePath}/web`
+    dst: `${this.basePath}/web`,
   };
 })();
 
@@ -50,7 +41,13 @@ let paths = (function () {
 let vendors = [
   "lazysizes",
   "lazysizes/plugins/object-fit/ls.object-fit",
-  "lazysizes/plugins/unveilhooks/ls.unveilhooks"
+  "lazysizes/plugins/unveilhooks/ls.unveilhooks",
+  "scrollmagic",
+  "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators",
+  "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap",
+  "smooth-scrollbar",
+  "gsap",
+  "gsap/ScrollToPlugin",
 ];
 
 /**
@@ -62,8 +59,8 @@ let vendors = [
  */
 function server(done) {
   browserSync.init({
-    proxy: "{{ repo }}.local:8888/",
-    open: false
+    proxy: "usha.local:8888/",
+    open: false,
   });
   done();
 }
@@ -76,52 +73,38 @@ function server(done) {
  * @param {*} done
  */
 function reload(done) {
-  notify("Reloading...");
   browserSync.reload();
   done();
 }
 
 /**
- * Breakpoints Task
- *
- * Create SCSS breakpoints file from JSON, so they can be used as variables.
- */
-function breakpoints() {
-  notify("Generating breakpoints...");
-  return gulp
-    .src(`${paths.src}/breakpoints.json`)
-    .pipe(
-      jsonSass({
-        sass: false
-      })
-    )
-    .pipe(rename("_breakpoints.scss"))
-    .pipe(gulp.dest(`${paths.src}/sass/`));
-}
-
-/**
  * CSS Task
  *
- * The SASS files are run through postcss/autoprefixer and placed into one
+ * The css files are run through postcss/autoprefixer and placed into one
  * single main styles.min.css file (and sourcemap)
  */
 function css() {
-  notify("Compiling styles...");
   return gulp
-    .src(`${paths.src}/sass/main.scss`)
+    .src(`${paths.src}/css/styles.css`)
     .pipe(plumber())
     .pipe(
       stylelint({
-        reporters: [{ formatter: "string", console: true }]
+        reporters: [{ formatter: "string", console: true }],
       })
     )
     .pipe(sourcemaps.init())
     .pipe(
-      sass({
-        includePaths: ["node_modules/"]
-      })
+      postcss([
+        postcssImport({
+          root: `${paths.src}/css *`,
+        }),
+        postcssNested(),
+        postcssProperties(),
+        tailwindcss(),
+        autoprefixer(),
+        cssnano(),
+      ])
     )
-    .pipe(postcss([prefixer, cssnano]))
     .pipe(rename("styles.min.css"))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(`${paths.dst}/css/`))
@@ -135,13 +118,12 @@ function css() {
  * single scripts.min.js file (and sourcemap)
  */
 function js() {
-  notify("Building scripts...");
   return browserify({
     entries: `${paths.src}/js/app.js`,
-    debug: true
+    debug: true,
   })
     .external(
-      vendors.map(vendor => {
+      vendors.map((vendor) => {
         if (vendor.expose) {
           return vendor.expose;
         }
@@ -152,9 +134,9 @@ function js() {
       presets: ["@babel/preset-env"],
       plugins: [
         ["@babel/plugin-proposal-decorators", { legacy: true }],
-        ["@babel/plugin-proposal-class-properties", {}]
+        ["@babel/plugin-proposal-class-properties", {}],
       ],
-      sourceMaps: true
+      sourceMaps: true,
     })
     .bundle()
     .on("error", function (err) {
@@ -181,10 +163,10 @@ exports.js = js;
  */
 function vendor() {
   const b = browserify({
-    debug: true
+    debug: true,
   });
 
-  vendors.forEach(lib => {
+  vendors.forEach((lib) => {
     if (lib.expose) {
       b.require(lib.path, { expose: lib.expose });
     } else {
@@ -215,11 +197,8 @@ exports.vendor = vendor;
  * All images are optimized and copied to static folder.
  */
 function images() {
-  notify("Copying image files...");
   return gulp
-    .src([
-      `${paths.src}/images/**/*.{jpg,png,gif,svg,ico}`
-    ])
+    .src([`${paths.src}/images/**/*.{jpg,png,gif,svg,ico}`])
     .pipe(plumber())
     .pipe(
       imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })
@@ -235,7 +214,7 @@ function images() {
 function fonts() {
   return gulp
     .src([`${paths.src}/fonts/**/*`], {
-      base: `${paths.src}`
+      base: `${paths.src}`,
     })
     .pipe(gulp.dest(`${paths.dst}`));
 }
@@ -246,38 +225,31 @@ function fonts() {
  * Watch files to run proper tasks.
  */
 function watch() {
-  // Watch breakpoints file for changes & recompile
-  gulp.watch(`${paths.src}/breakpoints.json`, gulp.series(breakpoints, js));
-
-  // Watch SCSS files for changes & rebuild styles
-  gulp.watch(`${paths.src}/sass/**/*.scss`, css);
-
-  // Watch JS files for changes & recompile
+  gulp.watch(`${paths.src}/css/**/*.css`, css);
   gulp.watch(`${paths.src}/js/**/*.js`, js);
-
-  // Watch images for changes, optimize & recompile
   gulp.watch(`${paths.src}/images/**/*`, gulp.series(images, reload));
-
-
-  // Watch fonts for changes, copy & reload
   gulp.watch(`${paths.src}/fonts/**/*`, gulp.series(fonts, reload));
-
-  // Watch Twig files & reload
   gulp.watch(`${paths.templates}/**/*.twig`, reload);
+  gulp.watch(`./tailwind.config.js`, css);
+  gulp.watch(`./gulpfile.js`, reload);
 }
 
 /**
  * Default Task
  *
  * Running just `gulp` will:
- * - Compile JS and SCSS files
+ * - Compile JS and CSS files
  * - Optimize and copy images to static folder
  * - Copy fonts to static folder
  * - Launch BrowserSync & watch files
  */
+// exports.default = gulp.series(
+//   vendor,
+//   gulp.parallel(js, css, fonts, images),
+//   gulp.parallel(server, watch)
+// );
 exports.default = gulp.series(
   vendor,
-  breakpoints,
   gulp.parallel(js, css, fonts, images),
   gulp.parallel(server, watch)
 );
@@ -286,12 +258,8 @@ exports.default = gulp.series(
  * Build Task
  *
  * Running just `gulp build` will:
- * - Compile JS and SCSS files
+ * - Compile JS and CSS files
  * - Optimize and copy images to static folder
  * - Copy fonts to static folder
  */
-exports.build = gulp.series(
-  vendor,
-  breakpoints,
-  gulp.parallel(js, css, fonts, images)
-);
+exports.build = gulp.series(vendor, gulp.parallel(js, css, fonts, images));
