@@ -5,3 +5,9 @@
 A custom composer starter project based on the original Craft `craft` repo:
 
 * https://github.com/craftcms/craft
+
+To install, run:
+
+```sh
+composer create-project weareferal/craft my-site
+```
