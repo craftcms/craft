@@ -1,13 +1,11 @@
 {
-  "name": "{{ repo }}",
+  "name": "[[name]]",
   "version": "1.0.0",
-  "description": "{{ description }}",
   "license": "proprietary",
   "repository": {
     "type": "git",
-    "url": "https://github.com/weareferal/{{ repo }}.git"
+    "url": "https://github.com/weareferal/[[name]].git"
   },
-  "homepage": "{{ domain }}",
   "dependencies": {
     "gsap": "^2.1.0",
     "lazysizes": "^5.1.0",

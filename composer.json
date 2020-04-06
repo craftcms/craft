@@ -41,7 +41,9 @@
       "@php -r \"rename('composer.json.default', 'composer.json');\"",
       "@composer dump-autoload -o",
       "@composer update",
-      "@php craft setup/welcome"
+      "sh ./bin/composer/post-install.sh",
+      "@composer update",
+      "./craft setup"
     ]
   }
 }
