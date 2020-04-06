@@ -59,7 +59,7 @@ let vendors = [
  */
 function server(done) {
   browserSync.init({
-    proxy: "usha.local:8888/",
+    proxy: "[[name]].local:8888/",
     open: false,
   });
   done();
@@ -243,11 +243,6 @@ function watch() {
  * - Copy fonts to static folder
  * - Launch BrowserSync & watch files
  */
-// exports.default = gulp.series(
-//   vendor,
-//   gulp.parallel(js, css, fonts, images),
-//   gulp.parallel(server, watch)
-// );
 exports.default = gulp.series(
   vendor,
   gulp.parallel(js, css, fonts, images),
