@@ -18,7 +18,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: hsl(212, 50%, 93%);
+            background-color: hsl(212, 60%, 97%);
             color: hsl(209, 18%, 30%);
             display: flex;
         }
@@ -103,42 +103,6 @@
             padding-right: calc(35px + env(safe-area-inset-right));
         }
 
-        @media (min-width:480px) {
-            #container {
-                display: flex;
-                align-items: normal;
-                justify-content: normal;
-            }
-        }
-
-        @media (min-width:480px) and (min-height: 376px) {
-            body {
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-
-            #container {
-                padding: 24px;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #modal {
-                height: 100%;
-                max-width: 770px;
-                max-height: 510px;
-                border-radius: 4px;
-                overflow: auto;
-                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-            }
-
-            #aside {
-                overflow: auto;
-            }
-        }
-
         @media (min-width:768px) {
             #modal {
                 display: flex;
@@ -151,6 +115,36 @@
 
             #aside {
                 width: 50%;
+                overflow: auto;
+            }
+        }
+
+        @media (min-width:768px) and (min-height: 376px) {
+            body {
+                background-color: hsl(212, 50%, 93%);
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            #container {
+                display: flex;
+                padding: 24px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #modal {
+                height: 100%;
+                max-width: 800px;
+                max-height: 525px;
+                border-radius: 4px;
+                overflow: auto;
+                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+            }
+
+            #aside {
                 overflow: auto;
             }
         }
