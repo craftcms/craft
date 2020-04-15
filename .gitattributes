@@ -1,0 +1,7 @@
+# Do not export those files in the Composer archive (lighter dependency)
+.gitattributes export-ignore
+LICENSE.md export-ignore
+README.md export-ignore
+
+# Auto detect text files and perform LF normalization
+* text=auto
