@@ -4,7 +4,7 @@ let gulp = require("gulp"),
   rename = require("gulp-rename"),
   sourcemaps = require("gulp-sourcemaps"),
   stylelint = require("gulp-stylelint"),
-  uglify = require("gulp-uglifyes"),
+  terser = require("gulp-terser"),
   svgSprite = require("gulp-svg-sprite"),
   babelify = require("babelify"),
   browserify = require("browserify"),
@@ -147,7 +147,7 @@ function js() {
     .pipe(buffer())
     .pipe(rename("scripts.min.js"))
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(`${paths.dst}/js/`))
     .pipe(browserSync.reload({ stream: true }));
@@ -184,7 +184,7 @@ function vendor() {
     .pipe(buffer())
     .pipe(rename("vendor.min.js"))
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(`${paths.dst}/js/`));
 }
