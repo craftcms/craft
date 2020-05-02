@@ -17,7 +17,9 @@ let gulp = require("gulp"),
   postcssNested = require("postcss-nested"),
   postcssProperties = require("postcss-custom-properties"),
   autoprefixer = require("autoprefixer"),
-  tailwindcss = require("tailwindcss");
+  tailwindcss = require("tailwindcss"),
+  purgecss = require("@fullhuman/postcss-purgecss"),
+  purgecssFromJs = require("purgecss-from-js");
 
 /**
  * Paths
@@ -102,6 +104,16 @@ function css() {
         postcssProperties(),
         tailwindcss(),
         autoprefixer(),
+        purgecss({
+          content: [
+            `${paths.src}/js/**/*.js`,
+            `${paths.templates}/**/*.twig`,
+            `${paths.templates}/**/*.html`,
+          ],
+          defaultExtractor: (content) => {
+            return content.match(/[\w-/:]+(?<!:)/g) || [];
+          },
+        }),
         cssnano(),
       ])
     )
