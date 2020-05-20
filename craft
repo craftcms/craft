@@ -20,7 +20,5 @@ if (class_exists('Dotenv\Dotenv') && file_exists(CRAFT_BASE_PATH.'/.env')) {
 define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
 /** @var craft\console\Application $app */
 $app = require CRAFT_VENDOR_PATH.'/craftcms/cms/bootstrap/console.php';
-$app->getRequest()->setIsConsoleRequest(true);
-$app->getRequest()->setScriptFile(__FILE__);
 $exitCode = $app->run();
 exit($exitCode);
