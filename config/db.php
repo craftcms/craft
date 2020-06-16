@@ -10,6 +10,16 @@
 
 use craft\helpers\App;
 
+if(App::env('DB_DSN')){
+    return [
+        'dsn' => App::env('DB_DSN'),
+        'user' => App::env('DB_USER'),
+        'password' => App::env('DB_PASSWORD'),
+        'schema' => App::env('DB_SCHEMA'),
+        'tablePrefix' => App::env('DB_TABLE_PREFIX'),
+    ];
+}
+  
 return [
     'driver' => App::env('DB_DRIVER'),
     'server' => App::env('DB_SERVER'),
@@ -20,3 +30,4 @@ return [
     'schema' => App::env('DB_SCHEMA'),
     'tablePrefix' => App::env('DB_TABLE_PREFIX'),
 ];
+  
