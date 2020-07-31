@@ -1,5 +1,6 @@
 # Do not export those files in the Composer archive (lighter dependency)
 .gitattributes export-ignore
+composer.lock export-ignore
 LICENSE.md export-ignore
 README.md export-ignore
 
