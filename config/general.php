@@ -19,7 +19,7 @@ return [
         // Whether generated URLs should omit "index.php"
         'omitScriptNameInUrls' => true,
 
-        // Control Panel trigger word
+        // Control panel trigger word
         'cpTrigger' => 'admin',
 
         // The secure key Craft will use for hashing and encrypting data
