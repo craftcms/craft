@@ -30,12 +30,18 @@ return [
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+
+        // Prevent crawlers from indexing pages and following links
+        'disallowRobots' => true,
     ],
 
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on staging
         'allowAdminChanges' => true,
+
+        // Prevent crawlers from indexing pages and following links
+        'disallowRobots' => true,
     ],
 
     // Production environment settings
