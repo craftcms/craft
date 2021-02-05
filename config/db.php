@@ -20,4 +20,6 @@ return [
     'password' => App::env('DB_PASSWORD'),
     'schema' => App::env('DB_SCHEMA'),
     'tablePrefix' => App::env('DB_TABLE_PREFIX'),
+    'charset' => 'utf8',
+    'collation' => 'utf8_unicode_ci',
 ];
