@@ -39,7 +39,7 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "@php -r \"copy('.env.example', '.env');\"",
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
       "@php -r \"unlink('composer.json');\"",
       "@php -r \"rename('composer.json.default', 'composer.json');\"",
       "@composer dump-autoload -o",
