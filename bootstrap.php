@@ -18,4 +18,3 @@ if (class_exists('Dotenv\Dotenv')) {
 // Define additional PHP constants
 // (see https://craftcms.com/docs/3.x/config/#php-constants)
 define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
-// ...
