@@ -21,7 +21,7 @@ return [
     'omitScriptNameInUrls' => true,
 
     // The URI segment that tells Craft to load the control panel
-    'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
+    'cpTrigger' => App::env('CP_TRIGGER') ?? 'admin',
 
     // The secure key Craft will use for hashing and encrypting data
     'securityKey' => App::env('SECURITY_KEY'),
