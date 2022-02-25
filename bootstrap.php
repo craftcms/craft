@@ -3,6 +3,8 @@
  * Shared bootstrap file
  */
 
+use craft\helpers\App;
+
 // Define path constants
 define('CRAFT_BASE_PATH', __DIR__);
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');
@@ -17,4 +19,4 @@ if (class_exists('Dotenv\Dotenv')) {
 
 // Define additional PHP constants
 // (see https://craftcms.com/docs/3.x/config/#php-constants)
-define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
+define('CRAFT_ENVIRONMENT', App::env('ENVIRONMENT') ?: 'production');
