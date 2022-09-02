@@ -17,9 +17,9 @@ return GeneralConfig::create()
     // Prevent generated URLs from including "index.php"
     ->omitScriptNameInUrls()
     // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-    ->devMode(App::env('DEV_MODE'))
+    ->devMode(App::env('DEV_MODE') ?? false)
     // Allow administrative changes
-    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES'))
+    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
     // Disallow robots
-    ->disallowRobots(App::env('DISALLOW_ROBOTS'))
+    ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
 ;
