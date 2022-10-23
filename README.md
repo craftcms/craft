@@ -10,14 +10,14 @@ It features:
 
 - An intuitive, user-friendly control panel for content creation and administrative tasks.
 - A clean-slate approach to content modeling that doesn’t make any assumptions about the content you need to manage.
-- An auto-generated [GraphQL API](https://craftcms.com/docs/4.x/graphql.html) that can be consumed for building headless applications.
-- A fast and flexible [templating system](https://craftcms.com/docs/4.x/dev/twig-primer.html) based on Twig for building traditional websites.
+- A fast and flexible [templating system](https://craftcms.com/docs/4.x/dev/twig-primer.html) based on Twig.
+- An auto-generated [GraphQL API](https://craftcms.com/docs/4.x/graphql.html) for building headless applications.
 - A powerful [ecommerce platform](https://craftcms.com/commerce) for building bespoke ecommerce experiences.
 - A built-in Plugin Store with hundreds of free and commercial [plugins](https://plugins.craftcms.com/).
-- A robust framework for [module and plugin development](https://craftcms.com/docs/4.x/extend/).
+- A robust [extension framework](https://craftcms.com/docs/4.x/extend/) for advanced customization.
 - An active, vibrant [community](https://craftcms.com/community).
 
-You can learn more about it at [craftcms.com](https://craftcms.com), and documentation is available at [craftcms.com/docs](https://craftcms.com/docs/4.x/).
+You can learn more about it at [craftcms.com](https://craftcms.com), or dive into the documentation at [craftcms.com/docs](https://craftcms.com/docs/4.x/).
 
 ## Tech Specs
 
