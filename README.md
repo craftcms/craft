@@ -17,11 +17,11 @@ It features:
 - A robust framework for [module and plugin development](https://craftcms.com/docs/3.x/extend/).
 - An active, vibrant [community](https://craftcms.com/community).
 
-You can learn more about it at [craftcms.com](https://craftcms.com), and documentation is available at [craftcms.com/docs](https://craftcms.com/docs/3.x/).
+You can learn more about it at [craftcms.com](https://craftcms.com), and documentation is available at [craftcms.com/docs](https://craftcms.com/docs/4.x/).
 
 ## Tech Specs
 
-Craft is a self-hosted PHP application. It can connect to MySQL and PostgreSQL for content storage. See [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) for more details.
+Craft is a self-hosted PHP application. It can connect to MySQL and PostgreSQL for content storage. See [Server Requirements](https://craftcms.com/docs/4.x/requirements.html) for more details.
 
 ## Popular Resources
 
