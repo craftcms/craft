@@ -16,7 +16,7 @@ __Psst!__ Looking for the Craft source code? Need to file a bug report or featur
 
 ## Getting Started
 
-This repository is a [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command.
+This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
 
 > **Note**  
 > Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
@@ -57,4 +57,4 @@ Craft’s [control panel](https://craftcms.com/docs/getting-started-tutorial/con
 
 ## Resources
 
-Craft comes with a ton of official and community [resources](https://github.com/craftcms/cms#resources).
+Craft comes with a ton of official and community [resources](https://github.com/craftcms/cms#resources). 
