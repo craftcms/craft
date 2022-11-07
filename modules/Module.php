@@ -6,19 +6,15 @@ use Craft;
 /**
  * Custom module class.
  *
- * This class will be available throughout the system via:
- * `Craft::$app->getModule('my-module')`.
+ * Learn about module development in Yii’s documentation...
+ * http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
  *
- * You can change its module ID ("my-module") to something else from
- * config/app.php.
+ * ...or start from Craft’s perspective:
+ * https://craftcms.com/docs/4.x/extend/module-guide.html
  *
- * If you want the module to get loaded on every request, uncomment this line
- * in config/app.php:
+ * To initialize the module on every request, open config/app.php and uncomment:
  *
  *     'bootstrap' => ['my-module']
- *
- * Learn more about Yii module development in Yii's documentation:
- * http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
  */
 class Module extends \yii\base\Module
 {
