@@ -2,6 +2,8 @@
 
 <br>
 
+## About Craft CMS
+
 [Craft](https://craftcms.com/) is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
 
 In technical terms, it’s a self-hosted PHP 8 application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
@@ -9,9 +11,9 @@ In technical terms, it’s a self-hosted PHP 8 application backed by a MySQL or 
 > **Note**
 > Psst! Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
 
-**If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try them out for yourself.
+:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try them out for yourself.
 
-**If you want to start building:** You’re in exactly the right place.
+:construction_worker_woman: **If you want to start building:** You’re in exactly the right place.
 
 ## Getting Started
 
