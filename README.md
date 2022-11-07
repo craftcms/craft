@@ -8,18 +8,20 @@
 
 In technical terms, it’s a self-hosted PHP 8 application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
 
-> **Note**
+> **Note**  
 > Psst! Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
+
+---
 
 :postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try them out for yourself.
 
-:construction_worker_woman: **If you want to start building:** You’re in exactly the right place.
+:construction_worker_woman: **If you want to start building:** You’re in exactly the right place!
 
 ## Getting Started
 
 This repository is a [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command.
 
-> **Note**
+> **Note**  
 > Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
 
 The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment.
