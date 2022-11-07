@@ -30,8 +30,7 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
     mkdir first-craft-site
     cd first-craft-site
     ```
-3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms):
-
+3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
     ```bash
     ddev config --project-type=craftcms
 
@@ -49,7 +48,6 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
 
     # -> https://tutorial.ddev.site/
     ```
-
 4. Visit the URL printed to your terminal, or run `ddev launch`.
 
 Craft’s [control panel](https://craftcms.com/docs/getting-started-tutorial/configure/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/configure/control-panel.html), or dive right in on content modeling:
