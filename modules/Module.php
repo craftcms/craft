@@ -12,7 +12,7 @@ use Craft;
  * ...or start from Craft’s perspective:
  * https://craftcms.com/docs/4.x/extend/module-guide.html
  *
- * To initialize the module on every request, open config/app.php and uncomment:
+ * To initialize this module on every request, open config/app.php and uncomment:
  *
  *     'bootstrap' => ['my-module']
  */
