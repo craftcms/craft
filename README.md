@@ -27,8 +27,8 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
 2. Choose a folder for your project and move into it:
     ```bash
     cd /path/to/web/projects
-    mkdir first-craft-site
-    cd first-craft-site
+    mkdir my-project
+    cd my-project
     ```
 3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
     ```bash
@@ -46,7 +46,7 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
     # Run the Craft CMS installer (use all defaults):
     ddev craft install
 
-    # -> https://first-craft-site.ddev.site/
+    # -> https://my-project.ddev.site/
     ```
 4. Visit the URL printed to your terminal, or run `ddev launch`.
 
