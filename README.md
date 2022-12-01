@@ -2,43 +2,59 @@
 
 <br>
 
-## About Craft CMS
+[Craft](https://craftcms.com/) is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
 
-Craft is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
+In technical terms, it’s a self-hosted PHP 8 application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
 
-It features:
+__Psst!__ Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
 
-- An intuitive, user-friendly control panel for content creation and administrative tasks.
-- A clean-slate approach to content modeling that doesn’t make any assumptions about the content you need to manage.
-- A fast and flexible [templating system](https://craftcms.com/docs/4.x/dev/twig-primer.html) based on Twig.
-- An auto-generated [GraphQL API](https://craftcms.com/docs/4.x/graphql.html) for building headless applications.
-- A powerful [ecommerce platform](https://craftcms.com/commerce) for building bespoke ecommerce experiences.
-- A built-in Plugin Store with hundreds of free and commercial [plugins](https://plugins.craftcms.com/).
-- A robust [extension framework](https://craftcms.com/docs/4.x/extend/) for advanced customization.
-- An active, vibrant [community](https://craftcms.com/community).
+---
 
-You can learn more about it at [craftcms.com](https://craftcms.com), or dive into the documentation at [craftcms.com/docs](https://craftcms.com/docs/4.x/).
+:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try them out for yourself.
 
-## Tech Specs
+:construction_worker_woman: **If you are eager to start building:** You’re in exactly the right place!
 
-Craft is a self-hosted PHP application. It can connect to MySQL and PostgreSQL for content storage. See [Server Requirements](https://craftcms.com/docs/4.x/requirements.html) for more details.
+## Getting Started
+
+This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
+
+> **Note**  
+> Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
+
+The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment.
+
+1. [Install DDEV](https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/)
+2. Choose a folder for your project and move into it:
+    ```bash
+    cd /path/to/web/projects
+    mkdir my-project
+    cd my-project
+    ```
+3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
+    ```bash
+    ddev config --project-type=craftcms
+
+    # Use this package as a starting point:
+    ddev composer create -y --no-scripts --no-install craftcms/craft
+
+    # Boot up your development environment:
+    ddev start
+
+    # Install packages:
+    ddev composer update
+
+    # Run the Craft CMS installer (use all defaults):
+    ddev craft install
+
+    # -> https://my-project.ddev.site/
+    ```
+4. Visit the URL printed to your terminal, or run `ddev launch`.
+
+Craft’s [control panel](https://craftcms.com/docs/getting-started-tutorial/configure/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/configure/control-panel.html), or dive right in on modeling your own content:
+- :card_file_box: [Elements](https://craftcms.com/docs/4.x/elements.html): Learn about Craft’s core content types, and how to customize them.
+- :triangular_ruler: [Fields](https://craftcms.com/docs/4.x/fields.html): Create precisely the data structure and authoring experience you need.
+- :pencil2: [Templating](https://craftcms.com/docs/4.x/dev/twig-primer.html): Start using your data in a totally custom front-end.
 
 ## Resources
 
-### Official
-
-- **[Website](https://craftcms.com)** — Welcome to Craft!
-- **[Tutorial](https://craftcms.com/docs/getting-started-tutorial/)** — Build a blog with step-by-step instructions.
-- **[Installation](https://craftcms.com/docs/4.x/installation.html)** — Jump right in with Composer.
-- **[Documentation](https://craftcms.com/docs/)** — Read the official docs.
-- **[Knowledge Base](https://craftcms.com/knowledge-base)** — Find answers to common problems.
-- **[Newsletter](https://craftcms.com/newsletter/subscribe)** — Get official news and community updates.
-- **[Dot All](https://craftcms.com/events)** — Attend our annual conference.
-
-### Community
-
-- **[#craftcms](https://twitter.com/hashtag/craftcms)** — See the latest tweets about Craft.
-- **[Discord](https://craftcms.com/discord)** — Meet the community.
-- **[Stack Exchange](http://craftcms.stackexchange.com/)** — Get help and help others.
-- **[CraftQuest](https://craftquest.io/)** — Watch unlimited video lessons and courses.
-- **[nystudio107 Blog](https://nystudio107.com/blog)** — Learn Craft and modern web development.
+Craft comes with a ton of official and community [resources](https://github.com/craftcms/cms#resources). 
