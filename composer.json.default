@@ -1,9 +1,10 @@
 {
   "require": {
-    "craftcms/cms": "^4.2.7",
+    "craftcms/cms": "^4.3.5",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
+    "craftcms/generator": "^1.0.0",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
