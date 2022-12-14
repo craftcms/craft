@@ -1,7 +1,9 @@
 {
     "name": "Craft CMS",
     "image": "craftcms/php-fpm:8.1-dev",
-    "postAttachCommand": "php craft serve",
+    "postAttachCommand": [
+        "php craft serve"
+    ],
     "portsAttributes": {
         "9090": {
             "label": "HTTP Server",
