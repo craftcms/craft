@@ -3,14 +3,17 @@
     "image": "mcr.microsoft.com/devcontainers/php:8.2-bullseye",
     "postAttachCommand": "php craft serve",
     "portsAttributes": {
-      "9090": {
-        "label": "HTTP Server",
-        "onAutoForward": "openPreview"
-      }
+        "9090": {
+            "label": "HTTP Server",
+            "onAutoForward": "openPreview"
+        }
     },
     "customizations": {
-      "codespaces": {
-        "openFiles": []
-      }
-    }
+        "codespaces": {
+            "openFiles": []
+        }
+    },
+    "forwardPorts": [
+        8080
+    ]
 }
