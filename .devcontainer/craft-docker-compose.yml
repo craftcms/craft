@@ -1,0 +1,55 @@
+version: "3.6"
+services:
+  console:
+    image: craftcms/cli:8.0-dev
+    env_file: .env
+    environment:
+      XDEBUG_CONFIG: client_host=host.docker.internal
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    command: php craft queue/listen
+
+  web:
+    image: craftcms/nginx:8.0-dev
+    ports:
+      - 8080:8080
+    env_file: .env
+    environment:
+      XDEBUG_CONFIG: client_host=host.docker.internal
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
+  postgres:
+    image: postgres:13-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: db
+      POSTGRES_PASSWORD: db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "db", "-d", "db"]
+      interval: 5s
+      retries: 3
+
+  redis:
+    image: redis:5-alpine
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+
+volumes:
+  db_data:

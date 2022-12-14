@@ -1,11 +1,8 @@
 {
     "name": "Craft CMS",
-    "image": "craftcms/php-fpm:8.1-dev",
-    "postAttachCommand": [
-        "php craft serve"
-    ],
+    "dockerComposeFile": "craft-docker-compose.yml",
     "portsAttributes": {
-        "9090": {
+        "8080": {
             "label": "HTTP Server",
             "onAutoForward": "openPreview"
         }
