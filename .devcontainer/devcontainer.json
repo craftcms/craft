@@ -1,0 +1,17 @@
+{
+    "features": {
+        "mcr.microsoft.com/devcontainers/php": {}
+    },
+    "postAttachCommand": "php craft serve",
+    "portsAttributes": {
+      "9090": {
+        "label": "HTTP Server",
+        "onAutoForward": "openPreview"
+      }
+    },
+    "customizations": {
+      "codespaces": {
+        "openFiles": []
+      }
+    }
+}
