@@ -1,6 +1,6 @@
 {
     "name": "Craft CMS",
-    "image": "mcr.microsoft.com/devcontainers/php:8.2-bullseye",
+    "image": "craftcms/php-fpm:8.1-dev",
     "postAttachCommand": "php craft serve",
     "portsAttributes": {
         "9090": {
