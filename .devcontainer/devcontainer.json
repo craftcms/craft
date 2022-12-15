@@ -1,18 +1,16 @@
 {
-    "name": "Craft CMS",
-    "dockerComposeFile": "craft-docker-compose.yml",
+    "name": "craft",
+    "dockerComposeFile": ["craft-docker-compose.yml"],
+    "workspaceFolder": "/app",
+    "service": "app",
+    "shutdownAction": "stopCompose",
+    "extensions": [],
+    "settings": {},
+    "forwardPorts": [80],
+    "postCreateCommand": "cp .env.example.dev .env && composer install && php craft install",
     "portsAttributes": {
-        "8080": {
-            "label": "HTTP Server",
-            "onAutoForward": "openPreview"
+        "80": {
+            "label": "HTTP"
         }
-    },
-    "customizations": {
-        "codespaces": {
-            "openFiles": []
-        }
-    },
-    "forwardPorts": [
-        8080
-    ]
+    }
 }
