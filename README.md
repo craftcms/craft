@@ -19,7 +19,8 @@ __Psst!__ Looking for the Craft source code? Need to file a bug report or featur
 This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
 
 > **Note**  
-> Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).  
+> Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
+>
 > You can also find these instructions (and some other helpful tips) in [the documentation](https://craftcms.com/docs/4.x/installation.html).
 
 The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment.
