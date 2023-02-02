@@ -1,5 +1,5 @@
 {
-  "name": "craftcms/craft",
+  "name": "smonist/craft-vite",
   "description": "Craft CMS",
   "keywords": [
     "craft",
@@ -12,14 +12,15 @@
   "type": "project",
   "support": {
     "email": "support@craftcms.com",
-    "issues": "https://github.com/craftcms/cms/issues",
+    "issues": "hhttps://github.com/smonist/craft-vite/issues",
     "forum": "https://craftcms.stackexchange.com/",
-    "source": "https://github.com/craftcms/cms",
-    "docs": "https://craftcms.com/docs",
+    "source": "https://github.com/smonist/craft-vite",
+    "docs": "https://github.com/smonist/craft-vite#readme",
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
     "craftcms/cms": "^4.3.5",
+    "nystudio107/craft-vite": "^4.0.5",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
