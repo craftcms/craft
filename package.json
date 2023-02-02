@@ -1,0 +1,33 @@
+{
+	"name": "craft-ddev",
+	"version": "1.0.0",
+	"description": "Craft CMS 4 + DDEV + Vite Blueprint",
+	"main": "vite.config.js",
+	"scripts": {
+		"dev": "rimraf dist && node viteDevServerToggle.js 1 && vite --host",
+		"build": "rimraf dist && node viteDevServerToggle.js 0 && tsc && vite build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/smonist/craft-vite.git"
+	},
+	"author": "@thomasbendl, @smonist",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/smonist/craft-vite/issues"
+	},
+	"homepage": "https://github.com/smonist/craft-vite#readme",
+	"devDependencies": {
+		"fs-extra": "^11.1.0",
+		"prettier": "2.8.3",
+		"regenerator-runtime": "^0.13.11",
+		"rollup-plugin-critical": "^3.0.1",
+		"vite-plugin-live-reload": "^2.1.0",
+		"sass": "^1.58.0",
+		"typescript": "^4.9.5",
+		"rimraf": "^4.1.2",
+		"vite": "^4.1.1"
+	},
+	"dependencies": {
+	}
+}
