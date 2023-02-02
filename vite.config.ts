@@ -6,7 +6,7 @@ import viteCompression from "vite-plugin-compression";
 export default defineConfig({
 	host: true,
 	plugins: [
-		liveReload(["./templates/**/*", "./vendor/szenario/**/*"]),
+		liveReload(["./templates/**/*"]),
 		legacy({
 			targets: ["defaults"],
 			additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
