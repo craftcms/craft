@@ -1,0 +1,5 @@
+webimage_extra_packages: [chromium]
+web_environment:
+    - CPPFLAGS=-DPNG_ARM_NEON_OPT=0
+    - PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+    - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true

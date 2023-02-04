@@ -1,0 +1,11 @@
+# Override the web container's standard HTTP_EXPOSE and HTTPS_EXPOSE services
+# to expose port `3000` of DDEV's web container.
+version: "3.6"
+services:
+  web:
+    ports:
+      - "3000"
+    environment:
+      - HTTP_EXPOSE=${DDEV_ROUTER_HTTP_PORT}:80,${DDEV_MAILHOG_PORT}:8025,3001:3000
+      - HTTPS_EXPOSE=${DDEV_ROUTER_HTTPS_PORT}:80,${DDEV_MAILHOG_HTTPS_PORT}:8025,3000:3000
+    
