@@ -8,13 +8,13 @@
     "vite"
   ],
   "license": "0BSD",
-  "homepage": "https://github.com/smonist/craft-vite",
+  "homepage": "https://github.com/smonist/craft-vite-starter",
   "type": "project",
   "support": {
-    "issues": "hhttps://github.com/smonist/craft-vite/issues",
+    "issues": "https://github.com/smonist/craft-vite-starter/issues",
     "forum": "https://craftcms.stackexchange.com/",
-    "source": "https://github.com/smonist/craft-vite",
-    "docs": "https://github.com/smonist/craft-vite#readme",
+    "source": "https://github.com/smonist/craft-vite-starter",
+    "docs": "https://github.com/smonist/craft-vite-starter#readme",
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
