@@ -1,17 +1,16 @@
 {
   "name": "smonist/craft-vite",
-  "description": "Craft CMS",
+  "description": "Craft CMS with vite",
   "keywords": [
     "craft",
     "cms",
     "craftcms",
-    "project"
+    "vite"
   ],
   "license": "0BSD",
-  "homepage": "https://craftcms.com/",
+  "homepage": "https://github.com/smonist/craft-vite",
   "type": "project",
   "support": {
-    "email": "support@craftcms.com",
     "issues": "hhttps://github.com/smonist/craft-vite/issues",
     "forum": "https://craftcms.stackexchange.com/",
     "source": "https://github.com/smonist/craft-vite",
