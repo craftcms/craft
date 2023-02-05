@@ -4,8 +4,8 @@
 	"description": "Craft CMS 4 + DDEV + Vite Blueprint",
 	"main": "vite.config.js",
 	"scripts": {
-		"dev": "rimraf dist && node viteDevServerToggle.js 1 && vite --host",
-		"build": "rimraf dist && node viteDevServerToggle.js 0 && tsc && vite build"
+		"dev": "rimraf dist && vite-node viteDevServerToggle.ts 1 && vite --host",
+		"build": "rimraf dist && vite-node viteDevServerToggle.ts 0 && tsc && vite build"
 	},
 	"repository": {
 		"type": "git",
@@ -28,7 +28,8 @@
 		"rimraf": "^4.1.2",
 		"vite": "^4.1.1",
 		"vite-plugin-compression": "^0.5.1",
-		"@vitejs/plugin-legacy": "^4.0.1"
+		"@vitejs/plugin-legacy": "^4.0.1",
+		"vite-node": "^0.28.4"
 	},
 	"dependencies": {
 	},
