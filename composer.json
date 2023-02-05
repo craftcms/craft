@@ -1,6 +1,6 @@
 {
-  "name": "smonist/craft-vite",
-  "description": "Craft CMS with vite",
+  "name": "smonist/craft-vite-starter",
+  "description": "Craft CMS with DDEV & Vite",
   "keywords": [
     "craft",
     "cms",
