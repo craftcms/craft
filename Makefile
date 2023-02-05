@@ -8,8 +8,7 @@ install:
 	ddev config --project-type=craftcms
 	@echo "applying patches..."
 	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml
-	cp patches/config.m1.yaml .ddev/config.m1.yaml
-	cat patches/config.yaml >> .ddev/config.yaml
+	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
 	ddev start
 	ddev composer install
 	ddev yarn install
