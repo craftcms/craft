@@ -5,14 +5,10 @@ build: up
 dev: up
 	ddev yarn dev
 install:
-	ddev config --project-type=craftcms
 	@echo "applying patches..."
 	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml
 	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
-	ddev start
-	ddev composer install
 	ddev yarn install
-	ddev start
 	ddev craft setup/app-id \
 		$(filter-out $@,$(MAKECMDGOALS))
 	ddev craft setup/security-key \
