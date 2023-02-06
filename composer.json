@@ -48,7 +48,8 @@
       "@php -r \"unlink('composer.json');\"",
       "@php -r \"rename('composer.json.default', 'composer.json');\"",
       "@composer dump-autoload -o",
-      "@php craft setup/welcome"
+      "@php craft setup/welcome",
+      "make install"
     ]
   }
 }
