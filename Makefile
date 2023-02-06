@@ -8,6 +8,7 @@ install:
 	@echo "applying patches..."
 	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml
 	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
+	ddev restart
 	ddev yarn install
 	ddev craft setup/app-id \
 		$(filter-out $@,$(MAKECMDGOALS))
