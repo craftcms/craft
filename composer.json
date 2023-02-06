@@ -41,12 +41,5 @@
     "platform": {
       "php": "8.0.2"
     }
-  },
-  "scripts": {
-    "post-create-project-cmd": [
-      "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\"",
-      "@composer dump-autoload -o",
-      "@php craft setup/welcome"
-    ]
   }
 }
