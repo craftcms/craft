@@ -18,20 +18,23 @@
 	},
 	"homepage": "https://github.com/smonist/craft-vite#readme",
 	"devDependencies": {
-		"fs-extra": "^11.1.0",
 		"prettier": "2.8.3",
 		"regenerator-runtime": "^0.13.11",
+		"rimraf": "^4.1.2",
 		"rollup-plugin-critical": "^1.0.12",
-		"vite-plugin-live-reload": "^2.1.0",
 		"sass": "^1.58.0",
 		"terser": "^5.16.3",
 		"typescript": "^4.9.5",
-		"rimraf": "^4.1.2",
+		"unocss": "^0.49.4",
+		"@unocss/preset-wind": "^0.49.4",
+		"@unocss/transformer-directives": "^0.49.4",
 		"vite": "^4.1.1",
 		"vite-plugin-compression": "^0.5.1",
+		"vite-plugin-live-reload": "^2.1.0",
 		"@vitejs/plugin-legacy": "^4.0.1"
 	},
 	"dependencies": {
+		"@unocss/reset": "^0.49.4"
 	},
 	"browserslist": {
 		"production": [

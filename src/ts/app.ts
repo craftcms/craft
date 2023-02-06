@@ -1,3 +1,4 @@
-import "../css/main.scss";
+import 'uno.css';
+import '@unocss/reset/tailwind.css';
 
-alert('Hello from app.ts!');
+import "../css/main.scss";

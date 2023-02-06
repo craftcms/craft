@@ -3,6 +3,9 @@ import legacy from "@vitejs/plugin-legacy";
 import liveReload from "vite-plugin-live-reload";
 import critical from "rollup-plugin-critical";
 import viteCompression from "vite-plugin-compression";
+import UnoCSS from "unocss/vite";
+import { presetWind } from "unocss";
+import transformerDirectives from '@unocss/transformer-directives';
 
 // https://vitejs.dev/config/
 export default ({ command }) =>
@@ -22,6 +25,10 @@ export default ({ command }) =>
 			port: 3000,
 		},
 		plugins: [
+			UnoCSS({
+				presets: [presetWind()],
+				transformers: [transformerDirectives()],
+			}),
 			liveReload(["./templates/**/*"]),
 			legacy({
 				targets: ["defaults"],
