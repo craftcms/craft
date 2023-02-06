@@ -8,6 +8,15 @@ import viteCompression from "vite-plugin-compression";
 export default ({ command }) =>
 	defineConfig({
 		base: command === "serve" ? "" : "/dist/",
+		build: {
+			manifest: true,
+			outDir: "./web/dist/",
+			rollupOptions: {
+				input: {
+					app: "./src/ts/app.ts",
+				},
+			},
+		},
 		server: {
 			host: "0.0.0.0",
 			port: 3000,
