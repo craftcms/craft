@@ -1,10 +1,8 @@
-<!-- <img alt="craft-vite" src="https://raw.githubusercontent.com/smonist/craft-vite-starter/main/header.png"/> -->
 <img alt="craft-vite" src="header.png"/>
 <br />
 <div align="center">
-    <img src="https://badgen.net/packagist/name/smonist/craft-vite-starter" alt="Packagist Package Name" />
-    <img src="https://badgen.net/packagist/v/smonist/craft-vite-starter" alt="Packagist Package Version"/>
-</a>
+<a href="https://packagist.org/packages/smonist/craft-vite-starter" target="_blank">
+    <img src="https://badgen.net/packagist/name/smonist/craft-vite-starter" alt="Packagist Package Name" /></a>
 </div>
 <br />
 <div align="center"><strong>Craft CMS 4 infused with Vite, TypeScript and WindiCSS.</strong></div>
@@ -27,49 +25,44 @@ source <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/ma
 
 ## Quickstart
 
-1.  ``ddev config --project-type=craftcms --docroot=web --create-docroot``
-2.  ``ddev composer create -y smonist/craft-vite-starter``
-3.  ``make install``
-4.  ``make dev``
+1.  `ddev config --project-type=craftcms --docroot=web --create-docroot`
+2.  `ddev composer create -y smonist/craft-vite-starter`
+3.  `make install`
+4.  `make dev`
 
 ## Tech Stack
 
--   [🔥 **Craft CMS 4**](https://github.com/craftcms/cms)
--   [🚢 **DDEV**](https://github.com/drud/ddev)
--   [📦 **Vite**](https://github.com/vitejs/vite)
--   [🔒 **TypeScript**](https://github.com/microsoft/TypeScript)
--   [💨 **WindiCSS**](https://github.com/windicss/windicss)
+- [🔥 **Craft CMS 4**](https://github.com/craftcms/cms)
+- [🚢 **DDEV**](https://github.com/drud/ddev)
+- [📦 **Vite**](https://github.com/vitejs/vite)
+- [🔒 **TypeScript**](https://github.com/microsoft/TypeScript)
+- [💨 **WindiCSS**](https://github.com/windicss/windicss)
 
 ## Requirements
 
--   DDEV
--   Unix-based OS (MacOS, Linux)
-
+- DDEV
+- Unix-based OS (MacOS, Linux)
 
 ### If you are on Windows
 
 Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/) is a great starting point.
 
 ## Commands
--   ``make install`` - patches the DDEV craft config and installs Craft CMS. Should only be used as a first time setup.
--   ``make dev`` - starts the development server
--   ``make build`` - bundles the assets for production
 
+- `make install` - patches the DDEV craft config and installs Craft CMS. Should only be used as a first time setup.
+- `make dev` - starts the development server
+- `make build` - bundles the assets for production
 
 ## Subsequent Use
 
--   ``ddev yarn`` - for managing frontend packages
--   ``ddev composer`` - for managing backend packages
--   ``ddev craft`` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/)
-
-
-
+- `ddev yarn` - for managing frontend packages
+- `ddev composer` - for managing backend packages
+- `ddev craft` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/)
 
 ## The team behind the magic ✨ 🪄 🦄
 
--  https://github.com/smonist
--  https://github.com/thomasbendl
-
+- https://github.com/smonist
+- https://github.com/thomasbendl
 
 ## Credits
 
