@@ -1,8 +1,10 @@
 .PHONY: build dev up install
 
-build: up
+build:
 	ddev yarn build
-dev: up
+	ddev launch
+dev:
+	ddev launch
 	ddev yarn dev
 install:
 	@echo "applying patches..."
@@ -19,12 +21,6 @@ install:
 	ddev craft plugin/install vite
 	@echo "ready for takeoff 🎉🎉🎉"
 	@echo "type 'make dev' to  run vite development server"
-up:
-	if [ ! "$$(ddev describe | grep OK)" ]; then \
-		ddev start; \
-		ddev composer install; \
-		ddev yarn install; \
-    fi
 %:
 	@:
 # ref: https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line
