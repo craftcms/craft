@@ -19,9 +19,11 @@
 
 <br />
 
-## Turbostart
+## Turbostart 🚀
 
-``source <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)``
+```sh
+source <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)
+```
 
 ## Quickstart
 
@@ -56,9 +58,9 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 
 ## Subsequent Use
 
-#### ``ddev yarn`` - for managing frontend packages
-#### ``ddev composer`` - for managing backend packages
-#### ``ddev craft`` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/)
+-   ``ddev yarn`` - for managing frontend packages
+-   ``ddev composer`` - for managing backend packages
+-   ``ddev craft`` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/)
 
 
 
