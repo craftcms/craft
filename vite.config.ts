@@ -26,8 +26,7 @@ export default ({ command }) =>
 			WindiCSS(),
 			liveReload(["./templates/**/*"]),
 			legacy({
-				targets: ["defaults", "ie >= 11"],
-				additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
+				targets: ["defaults"],
 			}),
 			critical({
 				criticalUrl: "http://localhost",
