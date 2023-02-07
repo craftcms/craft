@@ -3,9 +3,8 @@
 build:
 	ddev yarn build
 	ddev launch
-dev:
-	ddev launch
-	ddev yarn dev
+dev: up
+	sleep 3 && ddev launch & ddev yarn dev
 install:
 	@echo "applying patches..."
 	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml
@@ -21,6 +20,10 @@ install:
 	ddev craft plugin/install vite
 	@echo "ready for takeoff 🎉🎉🎉"
 	@echo "type 'make dev' to  run vite development server"
+up:
+	if [ ! "$$(ddev describe | grep OK)" ]; then \
+		ddev start; \
+    fi
 %:
 	@:
 # ref: https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line
