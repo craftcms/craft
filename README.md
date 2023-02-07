@@ -1,54 +1,75 @@
-<a href="https://craftcms.com/" rel="noopener" target="_blank"><img width="247" height="60" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a>
+<!-- <img alt="craft-vite" src="https://raw.githubusercontent.com/smonist/craft-vite-starter/main/header.png"/> -->
+<img alt="craft-vite" src="header.png"/>
+<br />
+<div align="center">
+    <img src="https://badgen.net/packagist/name/smonist/craft-vite-starter" alt="Packagist Package Name" />
+    <img src="https://badgen.net/packagist/v/smonist/craft-vite-starter" alt="Packagist Package Version"/>
+</a>
+</div>
+<br />
+<div align="center"><strong>Craft CMS 4 infused with Vite, TypeScript and WindiCSS.</strong></div>
+<div align="center">Lightning fast development, HMR and a production ready build process 🍃</div>
 
-<br>
+<br />
+<div align="center">
+  <sub>Made by</sub><br />
+  <sub><a href="https://twitter.com/smonist">Simon Wesp</a></sub><br />
+  <sub><a href="https://twitter.com/thomasbendl">Thomas Bendl</a></sub>  
+</div>
 
-[Craft](https://craftcms.com/) is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
+<br />
 
-In technical terms, it’s a self-hosted PHP 8 application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
+## Turbostart
 
-__Psst!__ Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
+``source <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)``
 
----
+## Quickstart
 
-:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try them out for yourself.
+1.  ``ddev config --project-type=craftcms --docroot=web --create-docroot``
+2.  ``ddev composer create -y smonist/craft-vite-starter``
+3.  ``make install``
+4.  ``make dev``
 
-:construction_worker_woman: **If you are eager to start building:** You’re in exactly the right place!
+## Tech Stack
 
-## Getting Started
+-   [🔥 **Craft CMS 4**](https://github.com/craftcms/cms)
+-   [🚢 **DDEV**](https://github.com/drud/ddev)
+-   [📦 **Vite**](https://github.com/vitejs/vite)
+-   [🔒 **TypeScript**](https://github.com/microsoft/TypeScript)
+-   [💨 **WindiCSS**](https://github.com/windicss/windicss)
 
-This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
+## Requirements
 
-> **Note**  
-> Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
->
-> You can also find these instructions (and some other helpful tips) in [the documentation](https://craftcms.com/docs/4.x/installation.html).
+-   DDEV
+-   Unix-based OS (MacOS, Linux)
 
-The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment.
 
-1. [Install DDEV](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/)
-2. Choose a folder for your project and move into it:
-    ```bash
-    cd /path/to/web/projects
-    mkdir my-project
-    cd my-project
-    ```
-3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
-    ```bash
-    ddev config --project-type=craftcms --docroot=web --create-docroot
+### If you are on Windows
 
-    # Use this package as a starting point:
-    ddev composer create -y --no-scripts craftcms/craft
+Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/) is a great starting point.
 
-    # Run the Craft CMS installer (use all defaults):
-    ddev craft install
-    ```
-4. Run `ddev launch` to open the project in your browser.
+## Commands
+-   ``make install`` - patches the DDEV craft config and installs Craft CMS. Should only be used as a first time setup.
+-   ``make dev`` - starts the development server
+-   ``make build`` - bundles the assets for production
 
-Craft’s [control panel](https://craftcms.com/docs/4.x/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/configure/control-panel.html), or dive right in on modeling your own content:
-- :card_file_box: [Elements](https://craftcms.com/docs/4.x/elements.html): Learn about Craft’s core content types, and how to customize them.
-- :triangular_ruler: [Fields](https://craftcms.com/docs/4.x/fields.html): Create precisely the data structure and authoring experience you need.
-- :pencil2: [Templating](https://craftcms.com/docs/4.x/dev/twig-primer.html): Start using your data in a totally custom front-end.
 
-## Resources
+## Subsequent Use
 
-Craft comes with a ton of official and community [resources](https://github.com/craftcms/cms#resources). 
+#### ``ddev yarn`` - for managing frontend packages
+#### ``ddev composer`` - for managing backend packages
+#### ``ddev craft`` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/)
+
+
+
+
+## The team behind the magic ✨ 🪄 🦄
+
+-  https://github.com/smonist
+-  https://github.com/thomasbendl
+
+
+## Credits
+
+This repository is based on the official [Craft CMS 4 starter template](https://github.com/craftcms/craft).  
+Thanks to Andrew Welch for the great [craft-vite plugin](https://github.com/nystudio107/craft-vite)!
