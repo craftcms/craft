@@ -19,6 +19,7 @@
 	"homepage": "https://github.com/smonist/craft-vite#readme",
 	"devDependencies": {
 		"prettier": "2.8.3",
+		"regenerator-runtime": "^0.13.11",
 		"rimraf": "^4.1.2",
 		"rollup-plugin-critical": "^1.0.12",
 		"sass": "^1.58.0",
