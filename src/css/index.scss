@@ -1,149 +1,153 @@
 html,
 body {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-  height: 100%;
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+	font-size: 16px;
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+	font-family: system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI",
+		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: hsl(212, 60%, 97%);
-  color: hsl(209, 18%, 30%);
-  display: flex;
+	margin: 0;
+	padding: 0;
+	background-color: hsl(212, 60%, 97%);
+	color: hsl(209, 18%, 30%);
+	display: flex;
 }
 
 h1 {
-  margin-top: 0;
-  font-weight: 600;
-  font-size: 1.3rem;
+	margin-top: 0;
+	font-weight: 600;
+	font-size: 1.3rem;
 }
 
 h2 {
-  margin-top: 24px;
-  font-size: 1em;
+	margin-top: 24px;
+	font-size: 1em;
 }
 
 h2:first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 p {
-  line-height: 1.4em;
-  margin-bottom: 1.4em;
+	line-height: 1.4em;
+	margin-bottom: 1.4em;
 }
 
 ul {
-  line-height: 1.3em;
-  padding-left: 20px;
-  margin-bottom: 0;
+	line-height: 1.3em;
+	padding-left: 20px;
+	margin-bottom: 0;
 }
 
 ul li {
-  margin-bottom: 0.35em;
+	margin-bottom: 0.35em;
 }
 
 a {
-  color: #0b69a3;
-  text-decoration: none;
+	color: #0b69a3;
+	text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .go {
-  color: #0b69a3;
+	color: #0b69a3;
 }
 
 .go:after {
-  padding-left: 4px;
-  content: "→";
-  text-decoration: none !important;
+	padding-left: 4px;
+	content: "→";
+	text-decoration: none !important;
 }
 
 small {
-  color: hsl(211, 11%, 59%);
+	color: hsl(211, 11%, 59%);
 }
 
 code {
-  display: inline-block;
-  color: #ef4e4e;
-  padding: 0 2px;
-  background: hsl(212, 60%, 97%);
-  border-radius: 3px;
-  line-height: 1.3;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 0.9em;
+	display: inline-block;
+	color: #ef4e4e;
+	padding: 0 2px;
+	background: hsl(212, 60%, 97%);
+	border-radius: 3px;
+	line-height: 1.3;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+		monospace;
+	font-size: 0.9em;
 }
 
 #container {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 #modal {
-  background: #fff;
+	background: #fff;
 }
 
 #aside {
-  background: hsl(212, 60%, 97%);
+	background: hsl(212, 60%, 97%);
 }
 
 .content {
-  padding: 35px;
-  padding-left: calc(35px + env(safe-area-inset-left));
-  padding-right: calc(35px + env(safe-area-inset-right));
+	padding: 35px;
+	padding-left: calc(35px + env(safe-area-inset-left));
+	padding-right: calc(35px + env(safe-area-inset-right));
 }
 
 @media (min-width: 768px) {
-  #modal {
-    display: flex;
-  }
+	#modal {
+		display: flex;
+	}
 
-  #main {
-    width: 50%;
-    overflow: auto;
-  }
+	#main {
+		width: 50%;
+		overflow: auto;
+	}
 
-  #aside {
-    width: 50%;
-    overflow: auto;
-  }
+	#aside {
+		width: 50%;
+		overflow: auto;
+	}
+}
+
+@keyframes bgAnimation {
+	0% {
+		background-position: 0% 90%;
+	}
+	50% {
+		background-position: 100% 11%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
 }
 
 @media (min-width: 768px) and (min-height: 376px) {
-  body {
-    background: rgb(238, 174, 202);
-		background: radial-gradient(
-			circle,
-			rgba(238, 174, 202, 1) 10%,
-			rgba(148, 187, 233, 1) 88%
-		);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
+	#container {
+		display: flex;
+		padding: 24px;
+		align-items: center;
+		justify-content: center;
 
-  #container {
-    display: flex;
-    padding: 24px;
-    align-items: center;
-    justify-content: center;
-  }
+		animation: bgAnimation 30s ease infinite;
+		background-size: 400% 400%;
+	}
 
-  #modal {
-    height: 100%;
-    max-width: 800px;
-    max-height: 525px;
-    border-radius: 4px;
-    overflow: auto;
-    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-  }
+	#modal {
+		height: 100%;
+		max-width: 800px;
+		max-height: 525px;
+		border-radius: 4px;
+		overflow: auto;
+		box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+	}
 
-  #aside {
-    overflow: auto;
-  }
+	#aside {
+		overflow: auto;
+	}
 }
