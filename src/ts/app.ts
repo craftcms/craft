@@ -1,2 +1,2 @@
-import "@unocss/reset/tailwind.css";
+import 'virtual:windi.css'
 import "../css/main.scss";
