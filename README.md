@@ -59,6 +59,10 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 - `ddev composer` - for managing backend packages
 - `ddev craft` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/)
 
+### Critical CSS
+
+To use Critical CSS, you need to manually add the pages that should be pre-rendered to the `criticalPages` array in `vite.config.ts`. The pages will be pre-rendered when building and the generated CSS will be inlined in the HTML.
+
 ## The team behind the magic ✨ 🪄 🦄
 
 - https://github.com/smonist
