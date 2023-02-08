@@ -20,15 +20,17 @@
 ## Turbostart 🚀
 
 ```sh
+mkdir my-project && cd my-project
 source <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)
 ```
 
 ## Quickstart
 
-1.  `ddev config --project-type=craftcms --docroot=web --create-docroot`
-2.  `ddev composer create -y smonist/craft-vite-starter`
-3.  `make install`
-4.  `make dev`
+1.  `mkdir my-project && cd my-project`
+2.  `ddev config --project-type=craftcms --docroot=web --create-docroot`
+3.  `ddev composer create -y smonist/craft-vite-starter`
+4.  `make install`
+5.  `make dev`
 
 ## Tech Stack
 
