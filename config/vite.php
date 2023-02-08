@@ -5,8 +5,8 @@ use craft\helpers\App;
 return [
     'useDevServer' => App::env('USE_VITE_DEV_SERVER'),
     'manifestPath' => '@webroot/dist/manifest.json',
-    'devServerPublic' => App::env('PRIMARY_SITE_URL') . ':3000',
-    'serverPublic' => App::env('PRIMARY_SITE_URL') . '/dist/',
+    'devServerPublic' => rtrim(App::env('PRIMARY_SITE_URL'), '/') . ':3000',
+    'serverPublic' => rtrim(App::env('PRIMARY_SITE_URL'), '/') . '/dist/',
     'errorEntry' => 'src/js/app.ts',
     'cacheKeySuffix' => '',
     'devServerInternal' => '',
