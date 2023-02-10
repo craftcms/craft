@@ -2,12 +2,12 @@
     "name": "craft",
     "dockerComposeFile": "../docker-compose.yml",
     "workspaceFolder": "/app",
-    "service": "workspace",
+    "service": "web",
     "shutdownAction": "stopCompose",
     "extensions": [],
     "settings": {},
     "forwardPorts": [80],
-    "postCreateCommand": "cp .env.example.dev .env && composer install && bash -i -c 'php craft install'",
+    "postCreateCommand": "cp .env.example.dev .env && mv composer.json.default composer.json && composer install && bash -i -c 'php craft install'",
     "portsAttributes": {
         "80": {
             "label": "HTTP"
