@@ -2,7 +2,7 @@
     "name": "craft",
     "dockerComposeFile": "../docker-compose.yml",
     "workspaceFolder": "/app",
-    "service": "web",
+    "service": "workspace",
     "shutdownAction": "stopCompose",
     "extensions": [],
     "settings": {},
