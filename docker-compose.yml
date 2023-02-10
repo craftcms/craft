@@ -1,0 +1,57 @@
+version: '3'
+services:
+  composer:
+    image: composer
+    volumes:
+      - .:/app
+
+  craft:
+    image: craftcms/nginx:8.0-dev
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/app
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+    environment:
+      CODESPACES: ${CODESPACES}
+      CODESPACE_NAME: ${CODESPACE_NAME}
+    logging:
+      options:
+        max-size: "1m"
+        max-file: "3"
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb
+    ports:
+      - '3306:3306'
+    volumes:
+      - dbdata:/var/lib/mysql:delegated
+    environment:
+      MYSQL_DATABASE: craft
+      MYSQL_USER: craft
+      MYSQL_PASSWORD: craft
+      MYSQL_ROOT_PASSWORD: root
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    logging:
+      options:
+        max-size: "1m"
+        max-file: "3"
+
+  workspace:
+    image: mcr.microsoft.com/vscode/devcontainers/universal:1-focal
+    init: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/workspace
+
+volumes:
+  dbdata:
+    driver: local
