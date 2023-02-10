@@ -4,7 +4,7 @@ services:
     image: mcr.microsoft.com/vscode/devcontainers/universal:1-focal
     init: true
     volumes:
-      - workspace:/workspace
+      - workspace:/app
 
   web:
     image: craftcms/nginx:8.1-dev
