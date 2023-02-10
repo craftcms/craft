@@ -1,17 +1,17 @@
 version: "3"
 services:
-  # workspace:
-  #   image: mcr.microsoft.com/vscode/devcontainers/universal:1-focal
-  #   init: true
-  #   volumes:
-  #     - workspace:/app
+  workspace:
+    image: craftcms/cli:8.1-dev
+    init: true
+    volumes:
+      - .:/app
 
   web:
     image: craftcms/nginx:8.1-dev
     volumes:
       - .:/app
     ports:
-      - 80:8080
+      - 8080:8080
     environment:
       CRAFT_ENVIRONMENT: dev
       CRAFT_DB_DRIVER: pgsql

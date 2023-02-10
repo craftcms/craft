@@ -6,10 +6,11 @@
     "shutdownAction": "stopCompose",
     "extensions": [],
     "settings": {},
-    "forwardPorts": [80],
-    "postCreateCommand": "cp .env.example.dev .env && mv composer.json.default composer.json && composer install && bash -i -c 'php craft install'",
+    "forwardPorts": [8080],
+    "initializeCommand": "cp .env.example.dev .env && mv composer.json.default composer.json",
+    "postCreateCommand": "composer install && bash -i -c 'php craft install'",
     "portsAttributes": {
-        "80": {
+        "8080": {
             "label": "HTTP"
         }
     }
