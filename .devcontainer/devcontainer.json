@@ -1,6 +1,7 @@
 {
     "name": "craft",
     "dockerComposeFile": "../docker-compose.yml",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
     "workspaceFolder": "/app",
     "service": "workspace",
     "shutdownAction": "stopCompose",
