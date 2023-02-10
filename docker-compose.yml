@@ -1,15 +1,15 @@
 version: "3"
 services:
-  workspace:
-    image: mcr.microsoft.com/vscode/devcontainers/universal:1-focal
-    init: true
-    volumes:
-      - workspace:/app
+  # workspace:
+  #   image: mcr.microsoft.com/vscode/devcontainers/universal:1-focal
+  #   init: true
+  #   volumes:
+  #     - workspace:/app
 
   web:
     image: craftcms/nginx:8.1-dev
     volumes:
-      - workspace:/app
+      - .:/app
     ports:
       - 80:8080
     environment:
@@ -39,4 +39,3 @@ services:
 
 volumes:
   db:
-  workspace:
