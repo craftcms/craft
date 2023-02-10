@@ -20,7 +20,6 @@
 ## Turbostart 🚀
 
 ```sh
-mkdir my-project && cd my-project
 source <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)
 ```
 
