@@ -18,13 +18,13 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "^4.3.5",
+    "craftcms/cms": "^4.3.8",
     "nystudio107/craft-vite": "^4.0.5",
-    "vlucas/phpdotenv": "^5.4.0"
+    "vlucas/phpdotenv": "^5.5.0"
   },
   "require-dev": {
-    "craftcms/generator": "^1.0.0",
-    "yiisoft/yii2-shell": "^2.0.3"
+    "craftcms/generator": "^1.2.2",
+    "yiisoft/yii2-shell": "^2.0.5"
   },
   "autoload": {
     "psr-4": {
