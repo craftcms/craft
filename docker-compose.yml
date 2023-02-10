@@ -1,11 +1,17 @@
 version: "3"
 services:
-  app:
+  workspace:
+    image: mcr.microsoft.com/vscode/devcontainers/universal:1-focal
+    init: true
+    volumes:
+      - workspace:/workspace
+
+  web:
     image: craftcms/nginx:8.1-dev
     volumes:
-      - ../:/app:cached
+      - workspace:/app
     ports:
-      - 80:80
+      - 8080:8080
     environment:
       CRAFT_ENVIRONMENT: dev
       CRAFT_DB_DRIVER: pgsql
@@ -19,6 +25,8 @@ services:
     restart: unless-stopped
     ports:
       - 5432:5432
+    volumes:
+      - db:/var/lib/mysql:delegated
     environment:
       POSTGRES_DB: db
       POSTGRES_USER: db
@@ -29,7 +37,6 @@ services:
     ports:
       - 6379:6379
 
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-      - 8025:8025
+volumes:
+  db:
+  workspace:

@@ -1,8 +1,8 @@
 {
     "name": "craft",
-    "dockerComposeFile": ["craft-docker-compose.yml"],
+    "dockerComposeFile": "../docker-compose.yml",
     "workspaceFolder": "/app",
-    "service": "app",
+    "service": "workspace",
     "shutdownAction": "stopCompose",
     "extensions": [],
     "settings": {},
