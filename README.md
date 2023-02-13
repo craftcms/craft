@@ -58,7 +58,7 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 
 - `ddev yarn` - for managing frontend packages
 - `ddev composer` - for managing backend packages
-- `ddev craft` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/)
+- `ddev craft` - exposes the [Craft CLI](https://ddev.readthedocs.io/en/latest/users/usage/commands/#craft)
 
 ### Critical CSS
 
