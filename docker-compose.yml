@@ -5,7 +5,7 @@ services:
     init: true
     volumes:
       - .:/app
-    command: php craft queue/listen
+    command: sleep infinity
 
   web:
     image: craftcms/nginx:8.1-dev
