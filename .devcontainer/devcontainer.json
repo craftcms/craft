@@ -9,7 +9,7 @@
     "settings": {},
     "forwardPorts": [8080],
     "initializeCommand": "cp .env.example.dev .env && mv composer.json.default composer.json",
-    "postCreateCommand": "composer install && bash -i -c 'php craft install'",
+    "postCreateCommand": "composer install",
     "portsAttributes": {
         "8080": {
             "label": "HTTP"
