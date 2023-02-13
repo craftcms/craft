@@ -6,6 +6,7 @@ services:
     volumes:
       - .:/app
     command: sleep infinity
+    network_mode: service:web
 
   web:
     image: craftcms/nginx:8.1-dev
