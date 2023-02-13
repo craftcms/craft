@@ -8,7 +8,7 @@
     "extensions": [],
     "settings": {},
     "forwardPorts": [8080],
-    "initializeCommand": "cp .env.example.dev .env && mv -f composer.json.default composer.json",
+    "initializeCommand": "cp -n .env.example.dev .env && [[ -f composer.json.default ]] && mv composer.json.default composer.json",
     "postCreateCommand": "composer install",
     "portsAttributes": {
         "8080": {
