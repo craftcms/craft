@@ -33,10 +33,11 @@ services:
       MYSQL_DATABASE: db
       MYSQL_USER: db
       MYSQL_PASSWORD: db
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      timeout: 5s
-      retries: 20
+      timeout: 1s
+      retries: 10
 
 volumes:
   db:
