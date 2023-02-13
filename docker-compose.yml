@@ -11,8 +11,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-      redis:
-        condition: service_healthy
 
   web:
     image: craftcms/nginx:8.1-dev
