@@ -1,22 +1,20 @@
 version: "3"
 services:
-  # workspace:
-  #   image: craftcms/cli:8.1-dev
-  #   volumes:
-  #     - .:/app
-  #   tty: true
-  #   network_mode: service:web
-  #   depends_on:
-  #     db:
-  #       condition: service_healthy
+  workspace:
+    image: craftcms/cli:8.1-dev
+    volumes:
+      - .:/app
+    network_mode: service:web
+    depends_on:
+      db:
+        condition: service_healthy
 
   web:
     image: craftcms/nginx:8.1-dev
-    user: www-data
     volumes:
       - .:/app
     ports:
-      - 8080:8080
+      - 80:8080
 
   db:
     image: mysql

@@ -3,15 +3,15 @@
     "dockerComposeFile": "../docker-compose.yml",
     "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
     "workspaceFolder": "/app",
-    "service": "web",
+    "service": "workspace",
     "shutdownAction": "stopCompose",
     "extensions": [],
     "settings": {},
-    "forwardPorts": [8080],
-    "initializeCommand": "cp -n .env.example.dev .env && [[ -f composer.json.default && ! -f composer.json ]] && mv composer.json.default composer.json",
-    "postCreateCommand": "composer install",
+    "forwardPorts": [80],
+    "initializeCommand": "cp -n .env.example.dev .env ; [[ -f composer.json.default && ! -f composer.json ]] && mv composer.json.default composer.json ; echo \"Configuration files are in place!\"",
+    "postCreateCommand": "composer install && php craft install",
     "portsAttributes": {
-        "8080": {
+        "80": {
             "label": "HTTP"
         }
     }
