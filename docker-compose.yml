@@ -40,28 +40,5 @@ services:
       timeout: 5s
       retries: 5
 
-  # db:
-  #   image: postgres:13
-  #   restart: unless-stopped
-  #   ports:
-  #     - 5432:5432
-  #   volumes:
-  #     - db:/var/lib/postgresql/data:delegated
-  #   environment:
-  #     POSTGRES_DB: db
-  #     POSTGRES_USER: db
-  #     POSTGRES_PASSWORD: db
-  #   healthcheck:
-  #     test: ["CMD", "pg_isready", "-U", "db", "-d", "db"]
-  #     interval: 5s
-  #     retries: 3
-
-  # redis:
-  #   image: redis:6-alpine
-  #   ports:
-  #     - 6379:6379
-  #   healthcheck:
-  #     test: ["CMD", "redis-cli", "ping"]
-
 volumes:
   db:
