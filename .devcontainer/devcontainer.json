@@ -5,14 +5,33 @@
     "workspaceFolder": "/app",
     "service": "workspace",
     "shutdownAction": "stopCompose",
-    "extensions": [],
-    "settings": {},
-    "forwardPorts": [8080],
+    "customizations": {
+        // Config for VS Code:
+        "vscode": {
+            // Recommended extensions:
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "mblode.twig-language",
+                "xdebug.php-debug"
+            ],
+            // Additional settings:
+            "settings": {}
+        }
+        // Config for GitHub Codespaces:
+        "codespaces": {},
+    },
+    // Copy configuration files (.env + composer.json) into place:
     "initializeCommand": "cp -n .env.example.dev .env ; test -f composer.json.default && test ! -f composer.json && mv composer.json.default composer.json ; echo \"Configuration files are in place!\"",
+    // Install packages and run Craft’s setup wizard
     "postCreateCommand": "composer install && php craft install",
+    // Forward from our web container:
+    "forwardPorts": [8080],
+    // Labels for forwarded ports:
     "portsAttributes": {
         "8080": {
             "label": "HTTP"
         }
-    }
+    },
+    // Disregard default workspace `CMD`:
+    "overrideCommand": true
 }
