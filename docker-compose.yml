@@ -12,7 +12,11 @@ services:
       # Override default shell (/bin/nologin) for www-data:
       - SHELL=/bin/sh
     # Run queue in the background (once Craft is installed):
-    command: "until [ php craft install/check ]; do sleep 1; done && php craft queue/listen --verbose"
+    command: >
+      until [[ php craft install/check ]]
+        do sleep 1
+      done
+      php craft queue/listen --verbose
     # Make sure the database is ready:
     depends_on:
       db:
