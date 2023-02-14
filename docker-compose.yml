@@ -8,9 +8,9 @@ services:
       - .:/app
     # Expose web container to the workspace to support forwarding:
     network_mode: service:web
-    environment:
+    # environment:
       # Override default shell (/bin/nologin) for www-data:
-      - SHELL=/bin/sh
+      # - SHELL=/bin/sh
     # Run queue in the background (once Craft is installed):
     # command: /bin/sh -c "until [[ php craft install/check ]]; do sleep 1; done; php craft queue/listen --verbose"
     # Make sure the database is ready:
@@ -26,7 +26,7 @@ services:
     # Expose ports to the workspace component:
     ports:
       - "8080:8080" # nginx
-      - "9003:9003" # xdebug
+      # - "9003:9003" # xdebug
 
   db:
     # We're using MySQL, but you can replace it with Postgres if you want:
