@@ -7,11 +7,11 @@
     "shutdownAction": "stopCompose",
     "extensions": [],
     "settings": {},
-    "forwardPorts": [80],
+    "forwardPorts": [8080],
     "initializeCommand": "cp -n .env.example.dev .env ; [[ -f composer.json.default && ! -f composer.json ]] && mv composer.json.default composer.json ; echo \"Configuration files are in place!\"",
     "postCreateCommand": "composer install && php craft install",
     "portsAttributes": {
-        "80": {
+        "8080": {
             "label": "HTTP"
         }
     }
