@@ -20,7 +20,7 @@
         // Config for GitHub Codespaces:
         "codespaces": {
             "openFiles": [
-                "templates/index.html",
+                "templates/index.twig",
                 "config/general.php"
             ]
         }
