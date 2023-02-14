@@ -20,6 +20,8 @@ __Psst!__ Looking for the Craft source code? Need to file a bug report or featur
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=craftcms/craft)
 
+Click the button above to create a new project in GitHub Codespaces. Craft will prompt you for some installation settings as soon as the environment is ready; everything is up to you, but if you would like to use Codespace’s public preview URLs, use `$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN` when asked for the site’s base URL.
+
 ### Composer
 
 This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
