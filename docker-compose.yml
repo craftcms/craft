@@ -29,8 +29,8 @@ services:
       - .:/app
     # Expose ports to the workspace component:
     ports:
-      - 8080:8080 # nginx
-      - 9003:9003 # xdebug
+      - "8080:8080" # nginx
+      - "9003:9003" # xdebug
 
   db:
     # We're using MySQL, but you can replace it with Postgres if you want:
