@@ -16,9 +16,9 @@
             ],
             // Additional settings:
             "settings": {}
-        }
+        },
         // Config for GitHub Codespaces:
-        "codespaces": {},
+        "codespaces": {}
     },
     // Copy configuration files (.env + composer.json) into place:
     "initializeCommand": "cp -n .env.example.dev .env ; test -f composer.json.default && test ! -f composer.json && mv composer.json.default composer.json ; echo \"Configuration files are in place!\"",
