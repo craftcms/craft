@@ -1,8 +1,8 @@
 {
     "name": "craft",
     "dockerComposeFile": "../docker-compose.yml",
-    // "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
-    // "workspaceFolder": "/app",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
+    "workspaceFolder": "/app",
     "service": "workspace",
     "shutdownAction": "stopCompose",
     "customizations": {
@@ -10,9 +10,9 @@
         "vscode": {
             // Recommended extensions:
             "extensions": [
-                // "bmewburn.vscode-intelephense-client",
-                // "mblode.twig-language",
-                // "xdebug.php-debug"
+                "bmewburn.vscode-intelephense-client",
+                "mblode.twig-language",
+                "xdebug.php-debug"
             ],
             // Additional settings:
             "settings": {}
@@ -20,15 +20,15 @@
         // Config for GitHub Codespaces:
         "codespaces": {
             "openFiles": [
-                // "templates/index.twig",
-                // "config/general.php"
+                "templates/index.twig",
+                "config/general.php"
             ]
         }
     },
     // Copy configuration files (.env + composer.json) into place:
-    // "initializeCommand": "cp -n .env.example.dev .env ; test -f composer.json.default && mv -f composer.json.default composer.json ; echo \"Configuration files are in place!\"",
+    "initializeCommand": "cp -n .env.example.dev .env ; test -f composer.json.default && mv -f composer.json.default composer.json ; echo \"Configuration files are in place!\"",
     // Install packages and run Craft’s setup wizard
-    // "postCreateCommand": "composer install && php craft setup/welcome",
+    "postCreateCommand": "composer install && php craft setup/welcome",
     // Forward from our web container:
     "forwardPorts": [8080],
     // Labels for forwarded ports:
@@ -36,7 +36,7 @@
         "8080": {
             "label": "HTTP"
         }
-    }
+    },
     // Disregard default workspace `CMD`:
-    // "overrideCommand": true
+    "overrideCommand": true
 }
