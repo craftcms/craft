@@ -27,7 +27,6 @@ services:
       /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
     # We don't need the health check here, because `php craft install/check` will fail until it’s ready!
 
-
   web:
     # This image runs PHP *and* an HTTP server:
     image: craftcms/nginx:8.1-dev
