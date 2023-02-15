@@ -10,7 +10,7 @@ services:
     network_mode: service:web
     environment:
       # Override default shell (/bin/nologin) for www-data:
-      - SHELL=/bin/sh
+      SHELL: /bin/sh
     # Make sure the database is ready:
     depends_on:
       db:
