@@ -11,12 +11,22 @@ services:
     environment:
       # Override default shell (/bin/nologin) for www-data:
       - SHELL=/bin/sh
-    # Run queue in the background (once Craft is installed):
-    command: /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
     # Make sure the database is ready:
     depends_on:
       db:
         condition: service_healthy
+
+  queue:
+    # Another copy of this to run the queue:
+    image: craftcms/cli:8.1-dev
+    # This also needs access to the workspace:
+    volumes:
+      - .:/app
+    # Run queue in the background (once Craft is installed):
+    command: >
+      /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
+    # We don't need the health check here, because `php craft install/check` will fail until it’s ready!
+
 
   web:
     # This image runs PHP *and* an HTTP server:
