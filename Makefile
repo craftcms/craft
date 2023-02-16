@@ -4,7 +4,7 @@ build:
 	ddev yarn build
 	ddev launch
 dev: up
-	sleep 3 && ddev launch & ddev yarn dev
+	ddev yarn dev
 install:
 	@echo "applying patches..."
 	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml

@@ -20,4 +20,4 @@ cd $folder_name
 git clone https://github.com/smonist/craft-vite-starter.git .
 ddev config --project-type=craftcms --docroot=web
 make install
-make dev
+sleep 2 && ddev launch & ddev yarn dev
