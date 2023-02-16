@@ -4,8 +4,8 @@
 	"description": "Craft CMS 4 + DDEV + Vite Blueprint",
 	"main": "vite.config.js",
 	"scripts": {
-		"dev": "rimraf web/dist && node viteDevServerToggle.js 1 && vite --host",
-		"build": "rimraf web/dist && node viteDevServerToggle.js 0 && tsc && vite build"
+		"dev": "node viteDevServerToggle.js 1 && vite --host",
+		"build": "node viteDevServerToggle.js 0 && tsc && vite build"
 	},
 	"repository": {
 		"type": "git",
@@ -20,7 +20,6 @@
 	"devDependencies": {
 		"prettier": "2.8.4",
 		"regenerator-runtime": "^0.13.11",
-		"rimraf": "^4.1.2",
 		"rollup-plugin-critical": "^1.0.12",
 		"sass": "^1.58.1",
 		"terser": "^5.16.3",

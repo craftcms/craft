@@ -10,6 +10,7 @@ export default ({ command }) =>
 	defineConfig({
 		base: command === "serve" ? "" : "/dist/",
 		build: {
+			emptyOutDir: true,
 			manifest: true,
 			outDir: "./web/dist/",
 			rollupOptions: {
