@@ -57,7 +57,8 @@ services:
     # Let Docker know how to monitor the component’s health:
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      timeout: 5s
+      interval: 2s
+      timeout: 1s
       retries: 30
       start_period: 30s
 
