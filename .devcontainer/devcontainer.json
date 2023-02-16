@@ -27,8 +27,10 @@
     },
     // Copy configuration files (.env + composer.json) into place:
     "initializeCommand": "cp -n .env.example.dev .env ; test -f composer.json.default && mv -f composer.json.default composer.json ; echo \"Configuration files are in place!\"",
-    // Install packages and run Craft’s setup wizard
-    "postCreateCommand": "composer install && php craft install/check || php craft setup/welcome",
+    // Install packages:
+    "postCreateCommand": "composer install",
+    // Run Craft’s setup wizard, if this is the first time attaching to the container:
+    "postAttachCommand": "php craft install/check || php craft setup/welcome",
     // Forward from our web container:
     "forwardPorts": [8080],
     // Labels for forwarded ports:
