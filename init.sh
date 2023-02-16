@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 while true; do
   read -p "Enter a project name: " folder_name
 
