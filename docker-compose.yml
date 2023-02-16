@@ -54,7 +54,6 @@ services:
       MYSQL_DATABASE: db
       MYSQL_USER: db
       MYSQL_PASSWORD: db
-      MYSQL_ALLOW_EMPTY_PASSWORD: true
     # Let Docker know how to monitor the component’s health:
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
