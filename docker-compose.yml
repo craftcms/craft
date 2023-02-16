@@ -13,8 +13,7 @@ services:
       SHELL: /bin/sh
     # Make sure the database is ready:
     depends_on:
-      db:
-        condition: service_healthy
+      - db
 
   queue:
     # Another copy of this to run the queue:
@@ -55,12 +54,12 @@ services:
       MYSQL_USER: db
       MYSQL_PASSWORD: db
     # Let Docker know how to monitor the component’s health:
-    healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      interval: 2s
-      timeout: 1s
-      retries: 30
-      start_period: 30s
+    # healthcheck:
+    #   test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+    #   interval: 2s
+    #   timeout: 1s
+    #   retries: 30
+    #   start_period: 30s
 
   ##
   # -> Add any other components you want!
