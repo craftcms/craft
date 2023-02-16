@@ -18,6 +18,6 @@ fi
 
 cd $folder_name
 ddev config --project-type=craftcms --docroot=web --create-docroot
-ddev composer create -y smonist/craft-vite-starter
+ddev composer create -y --no-scripts smonist/craft-vite-starter
 make install
 make dev
