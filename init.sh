@@ -17,7 +17,7 @@ else
 fi
 
 cd $folder_name
-ddev config --project-type=craftcms --docroot=web --create-docroot
-ddev composer create -y --no-scripts smonist/craft-vite-starter
+git clone https://github.com/smonist/craft-vite-starter.git .
+ddev config --project-type=craftcms --docroot=web
 make install
 make dev
