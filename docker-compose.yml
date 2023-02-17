@@ -6,7 +6,8 @@ services:
     # Mount the workspace directory:
     volumes:
       - .:/app
-    network_mode: host
+    networks:
+      - app
     # Expose ports to the workspace component:
     ports:
       - "8080:8080" # nginx
@@ -24,7 +25,8 @@ services:
     # This also needs access to the workspace:
     volumes:
       - .:/app
-    network_mode: host
+    networks:
+      - app
     # Run queue in the background (once Craft is installed):
     command: >
       /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
@@ -41,7 +43,8 @@ services:
     volumes:
       # Persist in a predictable volume name:
       - db:/var/lib/mysql
-    network_mode: host
+    networks:
+      - app
     # Set credentials to match .env:
     environment:
       MYSQL_DATABASE: db
@@ -60,6 +63,9 @@ services:
   #    https://docs.github.com/en/codespaces
   #    https://docs.docker.com/compose/compose-file/
   ##
+
+networks:
+  app:
 
 volumes:
   db:
