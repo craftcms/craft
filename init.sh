@@ -1,23 +1,22 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 <folder_name>"
-  exit 1
-fi
+while true; do
+  read -p "Enter a project name: " folder_name
 
-folder_name="$1"
-
-if [ -d "$folder_name" ]; then
-  if [ "$(ls -A $folder_name)" ]; then
-    echo "Error: the folder already exists and is not empty."
-    exit 1
+  if [ -d "$folder_name" ]; then
+    if [ "$(ls -A $folder_name)" ]; then
+      echo "Error: the folder already exists and is not empty."
+    else
+      break
+    fi
+  else
+    mkdir $folder_name
+    break
   fi
-else
-  mkdir "$folder_name"
-fi
+done
 
 cd $folder_name
-git clone https://github.com/smonist/craft-vite-starter.git .
-ddev config --project-type=craftcms --docroot=web
+ddev config --project-type=craftcms --docroot=web --create-docroot
+ddev composer create -y smonist/craft-vite-starter
 make install
 sleep 2 && ddev launch & ddev yarn dev
