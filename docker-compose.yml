@@ -6,8 +6,6 @@ services:
     # Mount the workspace directory:
     volumes:
       - .:/app
-    # Expose web container to the workspace to support forwarding:
-    network_mode: service:web
     environment:
       # Override default shell (/bin/nologin) for www-data:
       SHELL: /bin/sh
