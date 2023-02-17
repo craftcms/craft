@@ -2,10 +2,14 @@ version: "3"
 services:
   workspace:
     # Use Craft’s development PHP container:
-    image: craftcms/cli:8.1-dev
+    image: craftcms/nginx:8.1-dev
     # Mount the workspace directory:
     volumes:
       - .:/app
+    # Expose ports to the workspace component:
+    ports:
+      - "8080:8080" # nginx
+      - "9003:9003" # xdebug
     environment:
       # Override default shell (/bin/nologin) for www-data:
       SHELL: /bin/sh
@@ -22,16 +26,6 @@ services:
     # Run queue in the background (once Craft is installed):
     command: >
       /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
-
-  web:
-    # This image runs PHP *and* an HTTP server:
-    image: craftcms/nginx:8.1-dev
-    volumes:
-      - .:/app
-    # Expose ports to the workspace component:
-    ports:
-      - "8080:8080" # nginx
-      - "9003:9003" # xdebug
 
   db:
     # We're using MySQL, but you can replace it with Postgres if you want:
