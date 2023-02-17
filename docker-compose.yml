@@ -1,11 +1,12 @@
 version: "3"
 services:
   workspace:
-    # Use Craft’s development PHP container:
+    # Use Craft’s PHP + HTTP container:
     image: craftcms/nginx:8.1-dev
     # Mount the workspace directory:
     volumes:
       - .:/app
+    network_mode: host
     # Expose ports to the workspace component:
     ports:
       - "8080:8080" # nginx
@@ -23,6 +24,7 @@ services:
     # This also needs access to the workspace:
     volumes:
       - .:/app
+    network_mode: host
     # Run queue in the background (once Craft is installed):
     command: >
       /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
@@ -39,6 +41,7 @@ services:
     volumes:
       # Persist in a predictable volume name:
       - db:/var/lib/mysql
+    network_mode: host
     # Set credentials to match .env:
     environment:
       MYSQL_DATABASE: db
