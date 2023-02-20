@@ -20,7 +20,7 @@
 ## Turbostart 🚀
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh | bash -s my-project
+bash <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)
 ```
 
 ## Quickstart
