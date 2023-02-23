@@ -1,3 +1,6 @@
+<br />
+<div align="center"><strong>What if tooling was done with 1 command?</strong></div>
+
 <img alt="craft-vite" src="header.png"/>
 <br />
 <div align="center">
@@ -10,8 +13,13 @@
 
 <br />
 <div align="center">
-  <sub>Made by</sub><br />
-  <sub><a href="https://twitter.com/smonist">Simon Wesp</a></sub><br />
+  <sub>Made possible by</sub>
+  <sub>
+  <a href="https://szenario.design/" target="_blank">
+    <img src="szenario.svg" alt="szenario.design logo" /></a>
+  </sub><br /><br />
+  <sub>The team behind the magic</sub><br />
+  <sub><a href="https://twitter.com/smonist">Simon Wesp</a></sub>
   <sub><a href="https://twitter.com/thomasbendl">Thomas Bendl</a></sub>  
 </div>
 
@@ -64,10 +72,6 @@ Use WSL2 and follow the instructions for Unix-based OS. [DDEV Documentation](htt
 
 To use Critical CSS, you need to manually add the pages that should be pre-rendered to the `criticalPages` array in `vite.config.ts`. The pages will be pre-rendered when building and the generated CSS will be inlined in the HTML.
 
-## The team behind the magic ✨ 🪄 🦄
-
-- https://github.com/smonist
-- https://github.com/thomasbendl
 
 ## Credits
 
