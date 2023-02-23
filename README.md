@@ -2,14 +2,13 @@
 <div align="center"><strong>What if tooling was done with 1 command?</strong></div>
 
 <img alt="craft-vite" src="header.png"/>
-<br />
 <div align="center">
 <a href="https://packagist.org/packages/smonist/craft-vite-starter" target="_blank">
     <img src="https://badgen.net/packagist/name/smonist/craft-vite-starter" alt="Packagist Package Name" /></a>
 </div>
 <br />
 <div align="center"><strong>Craft CMS 4 infused with Vite, TypeScript and WindiCSS.</strong></div>
-<div align="center">Lightning fast development, HMR and a production ready build process 🍃</div>
+<div align="center">Lightning fast development, HMR and a production ready build process.</div>
 
 <br />
 <div align="center">
