@@ -2,7 +2,6 @@
 
 build:
 	ddev yarn build
-	ddev launch
 dev: up
 	ddev yarn dev
 install:
