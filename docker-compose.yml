@@ -1,23 +1,30 @@
 version: '3.9'
 services:
+  # Primary "workspace" service (VS Code will run in here!)
   workspace:
-    # Use Craft’s PHP + HTTP container:
-    image: craftcms/nginx:8.1-dev
+    # Use Craft’s PHP container:
+    image: craftcms/cli:8.1-dev
     # Mount the workspace directory:
     volumes:
       - .:/app
-    networks:
-      - app
-    # Expose ports to the workspace component:
-    ports:
-      - "8080:8080" # nginx
-      - "9003:9003" # xdebug
     environment:
       # Override default shell (/bin/nologin) for www-data:
       SHELL: /bin/sh
-    # Make sure the database is ready:
+    # Make sure the database is ready for our installer script:
     depends_on:
       - db
+
+  web:
+    # Craft’s PHP + HTTP container:
+    image: craftcms/nginx:8.1-dev
+    # Give the web server access to the workspace:
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080" # HTTP (nginx)
+    environment:
+      # The queue should also be able to communicate with xdebug:
+      XDEBUG_CONFIG: client_host=workspace
 
   queue:
     # Another copy of this to run the queue:
@@ -25,11 +32,12 @@ services:
     # This also needs access to the workspace:
     volumes:
       - .:/app
-    networks:
-      - app
     # Run queue in the background (once Craft is installed):
     command: >
       /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
+    environment:
+      # The queue should also be able to communicate with xdebug:
+      XDEBUG_CONFIG: client_host=workspace
 
   db:
     # We're using MySQL, but you can replace it with Postgres if you want:
@@ -43,29 +51,25 @@ services:
     volumes:
       # Persist in a predictable volume name:
       - db:/var/lib/mysql
-    networks:
-      - app
     # Set credentials to match .env:
     environment:
       MYSQL_DATABASE: db
       MYSQL_USER: db
       MYSQL_PASSWORD: db
     # Let Docker know how to monitor the component’s health:
-    # healthcheck:
-    #   test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-    #   interval: 2s
-    #   timeout: 1s
-    #   retries: 30
-    #   start_period: 30s
+    # (This is actually fine—it's just that the other services can’t see it!)
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "db"]
+      interval: 2s
+      timeout: 1s
+      retries: 30
+      start_period: 30s
 
   ##
   # -> Add any other components you want!
   #    https://docs.github.com/en/codespaces
   #    https://docs.docker.com/compose/compose-file/
   ##
-
-networks:
-  app:
 
 volumes:
   db:
