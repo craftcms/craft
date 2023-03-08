@@ -22,4 +22,6 @@ return GeneralConfig::create()
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+    // Preload single entries in Twig
+    ->preloadSingles(true)
 ;
