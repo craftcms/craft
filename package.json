@@ -9,14 +9,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/smonist/craft-vite.git"
+		"url": "git+https://github.com/szenario-fordesigners/craft-vite-starter/.git"
 	},
-	"author": "@thomasbendl, @smonist",
+	"author": "@szenario-fordesigners, @smonist, @thomasbendl",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/smonist/craft-vite/issues"
+		"url": "https://github.com/szenario-fordesigners/craft-vite-starter/issues"
 	},
-	"homepage": "https://github.com/smonist/craft-vite#readme",
+	"homepage": "https://github.com/szenario-fordesigners/craft-vite-starter/#readme",
 	"devDependencies": {
 		"prettier": "2.8.4",
 		"regenerator-runtime": "^0.13.11",

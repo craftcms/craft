@@ -1,5 +1,5 @@
 {
-  "name": "smonist/craft-vite-starter",
+  "name": "szenario-fordesigners/craft-vite-starter",
   "description": "Craft CMS with DDEV & Vite",
   "keywords": [
     "craft",
@@ -8,13 +8,13 @@
     "vite"
   ],
   "license": "0BSD",
-  "homepage": "https://github.com/smonist/craft-vite-starter",
+  "homepage": "https://github.com/szenario-fordesigners/craft-vite-starter",
   "type": "project",
   "support": {
-    "issues": "https://github.com/smonist/craft-vite-starter/issues",
+    "issues": "https://github.com/szenario-fordesigners/craft-vite-starter/issues",
     "forum": "https://craftcms.stackexchange.com/",
-    "source": "https://github.com/smonist/craft-vite-starter",
-    "docs": "https://github.com/smonist/craft-vite-starter#readme",
+    "source": "https://github.com/szenario-fordesigners/craft-vite-starter",
+    "docs": "https://github.com/szenario-fordesigners/craft-vite-starter#readme",
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
