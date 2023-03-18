@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["@nuxtjs"],
+  "extends": ["@nuxtjs", ":dependencyDashboard"],
   "ignorePaths": [
     "patches/docker-compose.vite.yaml"
   ]
