@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "smonist",
+      "name": "Simon Wesp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7086613?v=4",
+      "profile": "https://github.com/smonist",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "craft-vite-starter",
+  "projectOwner": "szenario-fordesigners"
+}
