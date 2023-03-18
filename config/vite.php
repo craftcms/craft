@@ -7,7 +7,7 @@ return [
     'manifestPath' => '@webroot/dist/manifest.json',
     'devServerPublic' => rtrim(App::env('PRIMARY_SITE_URL'), '/') . ':3000',
     'serverPublic' => rtrim(App::env('PRIMARY_SITE_URL'), '/') . '/dist/',
-    'errorEntry' => 'src/js/app.ts',
+    'errorEntry' => 'src/ts/app.ts',
     'cacheKeySuffix' => '',
     'devServerInternal' => '',
     'checkDevServer' => false,
