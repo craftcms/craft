@@ -1,6 +1,6 @@
 <br />
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <div align="center"><strong>What if tooling was done with 1 command?</strong></div>
 
@@ -85,6 +85,7 @@ Thanks to Andrew Welch for the great [craft-vite plugin](https://github.com/nyst
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/smonist"><img src="https://avatars.githubusercontent.com/u/7086613?v=4?s=100" width="100px;" alt="Simon Wesp"/><br /><sub><b>Simon Wesp</b></sub></a><br /><a href="https://github.com/szenario-fordesigners/craft-vite-starter/commits?author=smonist" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thomasbendl"><img src="https://avatars.githubusercontent.com/u/8804216?v=4?s=100" width="100px;" alt="Thomas Bendl"/><br /><sub><b>Thomas Bendl</b></sub></a><br /><a href="https://github.com/szenario-fordesigners/craft-vite-starter/commits?author=thomasbendl" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
