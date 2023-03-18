@@ -71,3 +71,15 @@ To use Critical CSS, you need to manually add the pages that should be pre-rende
 
 This repository is based on the official [Craft CMS 4 starter template](https://github.com/craftcms/craft).  
 Thanks to Andrew Welch for the great [craft-vite plugin](https://github.com/nystudio107/craft-vite)!
+
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
