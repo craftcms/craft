@@ -1,4 +1,7 @@
 <br />
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <div align="center"><strong>What if tooling was done with 1 command?</strong></div>
 
 <img alt="craft-vite" src="header.png"/>
@@ -76,6 +79,20 @@ Thanks to Andrew Welch for the great [craft-vite plugin](https://github.com/nyst
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/smonist"><img src="https://avatars.githubusercontent.com/u/7086613?v=4?s=100" width="100px;" alt="Simon Wesp"/><br /><sub><b>Simon Wesp</b></sub></a><br /><a href="https://github.com/szenario-fordesigners/craft-vite-starter/commits?author=smonist" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
