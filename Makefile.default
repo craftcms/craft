@@ -1,0 +1,13 @@
+.PHONY: build dev up
+
+build:
+	ddev yarn build
+dev: up
+	ddev yarn dev
+up:
+	if [ ! "$$(ddev describe | grep OK)" ]; then \
+		ddev start; \
+    fi
+%:
+	@:
+# ref: https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line
