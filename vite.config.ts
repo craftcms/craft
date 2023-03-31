@@ -4,6 +4,7 @@ import liveReload from "vite-plugin-live-reload";
 import critical from "rollup-plugin-critical";
 import viteCompression from "vite-plugin-compression";
 import WindiCSS from 'vite-plugin-windicss';
+import * as path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -43,5 +44,11 @@ export default defineConfig(({ command, mode }) => {
 			}),
 			viteCompression(),
 		],
+		resolve: {
+            alias: {
+              '@': path.resolve(__dirname, './src')
+            },
+            preserveSymlinks: true,
+        },
 	}
   })
