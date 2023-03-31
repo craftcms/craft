@@ -8,6 +8,7 @@ install:
 	@echo "applying patches..."
 	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml
 	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
+	cp patches/config.node.yaml .ddev/config.node.yaml
 	@echo "cleaning project..."
 	rm -rf patches .all-contributorsrc header.png szenario.svg Makefile renovate.json
 	mv Makefile.default Makefile
