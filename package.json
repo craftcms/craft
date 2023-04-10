@@ -21,7 +21,7 @@
 		"@types/node": "^18.15.11",
 		"prettier": "2.8.7",
 		"regenerator-runtime": "^0.13.11",
-		"rimraf": "^4.4.1",
+		"rimraf": "^5.0.0",
 		"rollup-plugin-critical": "^1.0.12",
 		"sass": "^1.61.0",
 		"terser": "^5.16.8",
