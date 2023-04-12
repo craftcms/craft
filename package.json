@@ -23,7 +23,7 @@
 		"regenerator-runtime": "^0.13.11",
 		"rimraf": "^5.0.0",
 		"rollup-plugin-critical": "^1.0.12",
-		"sass": "^1.61.0",
+		"sass": "^1.62.0",
 		"terser": "^5.16.9",
 		"typescript": "^5.0.4",
 		"vite": "^4.2.1",
