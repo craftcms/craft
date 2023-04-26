@@ -4,5 +4,8 @@
   "forkProcessing": "enabled",
   "ignorePaths": [
     "patches/docker-compose.vite.yaml"
+  ],
+  "schedule": [
+    "before 2am"
   ]
 }
