@@ -26,7 +26,7 @@
 		"sass": "^1.62.1",
 		"terser": "^5.17.1",
 		"typescript": "^5.0.4",
-		"vite": "^4.3.2",
+		"vite": "^4.3.3",
 		"vite-plugin-compression": "^0.5.1",
 		"vite-plugin-live-reload": "^3.0.2",
 		"vite-plugin-windicss": "^1.8.10",
