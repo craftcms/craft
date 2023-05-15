@@ -29,7 +29,7 @@ bash <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main
 
 1.  `mkdir my-project && cd my-project`
 2.  `ddev config --project-type=craftcms --docroot=web --create-docroot`
-3.  `ddev composer create -y smonist/craft-vite-starter`
+3.  `ddev composer create -y szenario-fordesigners/craft-vite-starter`
 4.  `make install`
 5.  `make dev`
 
