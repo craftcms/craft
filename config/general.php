@@ -24,4 +24,6 @@ return GeneralConfig::create()
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+    // Prevent user enumeration attacks
+    ->preventUserEnumeration()
 ;
