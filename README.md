@@ -8,9 +8,9 @@
 <br />
 <div align="center">
   <sub>Made possible by</sub>
-  <sub>
+  <sub><br />
   <a href="https://szenario.design/" target="_blank">
-    <img src="szenario.svg" alt="szenario.design logo" /></a>
+    <img src="szenario-logo.svg" style="width:140px;" alt="szenario.design logo" /></a>
   </sub><br /><br />
   <sub>The team behind the magic</sub><br />
   <sub><a href="https://twitter.com/smonist">Simon Wesp</a></sub>
