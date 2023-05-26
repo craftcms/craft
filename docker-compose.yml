@@ -7,6 +7,7 @@ services:
     # Mount the workspace directory:
     volumes:
       - .:/app
+    network_mode: host
     environment:
       # Override default shell (/bin/nologin) for www-data:
       SHELL: /bin/sh
@@ -22,6 +23,7 @@ services:
       - .:/app
     ports:
       - "8080:8080" # HTTP (nginx)
+    network_mode: host
     environment:
       # The queue should also be able to communicate with xdebug:
       XDEBUG_CONFIG: client_host=workspace
@@ -32,6 +34,7 @@ services:
     # This also needs access to the workspace:
     volumes:
       - .:/app
+    network_mode: host
     # Run queue in the background (once Craft is installed):
     command: >
       /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
@@ -48,6 +51,7 @@ services:
     restart: unless-stopped
     ports:
       - 3306:3306
+    network_mode: host
     volumes:
       # Persist in a predictable volume name:
       - db:/var/lib/mysql
