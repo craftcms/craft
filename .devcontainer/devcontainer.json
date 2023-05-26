@@ -32,11 +32,14 @@
     // Run Craft’s setup wizard, if this is the first time attaching to the container:
     "postAttachCommand": "php craft install/check || php craft setup/welcome",
     // Forward from our web container:
-    "forwardPorts": [8080],
+    "forwardPorts": [8080, 3306],
     // Labels for forwarded ports:
     "portsAttributes": {
         "8080": {
             "label": "HTTP"
+        },
+        "3306": {
+            "label": "Database"
         }
     },
     // Disregard default workspace `CMD` and use the default "keep-alive" process:
