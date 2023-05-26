@@ -7,6 +7,7 @@ services:
     # Mount the workspace directory:
     volumes:
       - .:/app
+    network_mode: service:db
     environment:
       # Override default shell (/bin/nologin) for www-data:
       SHELL: /bin/sh
@@ -20,7 +21,7 @@ services:
     # Give the web server access to the workspace:
     volumes:
       - .:/app
-    network_mode: service:workspace
+    network_mode: service:db
     environment:
       # The queue should also be able to communicate with xdebug:
       XDEBUG_CONFIG: client_host=workspace
@@ -31,7 +32,7 @@ services:
     # This also needs access to the workspace:
     volumes:
       - .:/app
-    network_mode: service:workspace
+    network_mode: service:db
     # Run queue in the background (once Craft is installed):
     command: >
       /bin/sh -c "until (php craft install/check); do sleep 1; done; php craft queue/listen --verbose"
@@ -46,7 +47,6 @@ services:
     # https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
-    network_mode: service:workspace
     volumes:
       # Persist in a predictable volume name:
       - db:/var/lib/mysql
