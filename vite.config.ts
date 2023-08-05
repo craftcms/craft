@@ -11,6 +11,13 @@ export default defineConfig(({ command, mode }) => {
 	// Load env file based on `mode` in the current working directory.
 	// Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
 	const env = loadEnv(mode, process.cwd(), '')
+	const origin = env.PRIMARY_SITE_URL
+	? {
+			origin: env.PRIMARY_SITE_URL,
+	  }
+	: {};
+
+
 	return {
 		base: command === "serve" ? "" : "/dist/",
 		build: {
@@ -24,6 +31,7 @@ export default defineConfig(({ command, mode }) => {
 			},
 		},
 		server: {
+			...origin,
 			host: "0.0.0.0",
 			port: 3000,
 		},
