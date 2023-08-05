@@ -10,12 +10,10 @@ import * as path from 'path';
 export default defineConfig(({ command, mode }) => {
 	// Load env file based on `mode` in the current working directory.
 	// Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
-	const env = loadEnv(mode, process.cwd(), '')
-	const origin = env.PRIMARY_SITE_URL
-	? {
-			origin: env.PRIMARY_SITE_URL,
-	  }
-	: {};
+	const env = loadEnv(mode, process.cwd(), '');
+
+	// no sanity checks here. when PRIMARY_SITE_URL is missing, something is wrong.
+	const primarySiteUrl = env.PRIMARY_SITE_URL.charAt(env.PRIMARY_SITE_URL.length - 1) === "/" ? env.PRIMARY_SITE_URL.slice(0, env.PRIMARY_SITE_URL.length - 1) : env.PRIMARY_SITE_URL;
 
 
 	return {
@@ -31,7 +29,7 @@ export default defineConfig(({ command, mode }) => {
 			},
 		},
 		server: {
-			...origin,
+			origin: `${primarySiteUrl}:3000`,
 			host: "0.0.0.0",
 			port: 3000,
 		},
@@ -43,7 +41,7 @@ export default defineConfig(({ command, mode }) => {
 				additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
 			}),
 			critical({
-				criticalUrl: env.PRIMARY_SITE_URL.charAt(env.PRIMARY_SITE_URL.length - 1) === "/" ? env.PRIMARY_SITE_URL.slice(0, env.PRIMARY_SITE_URL.length - 1) : env.PRIMARY_SITE_URL,
+				criticalUrl: primarySiteUrl,
 				criticalBase: "./web/dist/criticalcss/",
 				criticalPages: [{ uri: "/", template: "index" }],
 				criticalConfig: {
