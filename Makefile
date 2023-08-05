@@ -9,6 +9,10 @@ install:
 	cp patches/docker-compose.vite.yaml .ddev/docker-compose.vite.yaml
 	cp patches/config.criticalcss.yaml .ddev/config.criticalcss.yaml
 	cp patches/config.node.yaml .ddev/config.node.yaml
+
+# remove default .gitignore entries from ddev. we want our ptaches to be tracked by git
+	sed -i '/config.*.y*ml/d' .ddev/.gitignore
+	
 	@echo "cleaning project..."
 	rm -rf patches .all-contributorsrc header.png szenario.svg Makefile renovate.json
 	mv Makefile.default Makefile
