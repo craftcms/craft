@@ -18,7 +18,7 @@
 	},
 	"homepage": "https://github.com/szenario-fordesigners/craft-vite-starter/#readme",
 	"devDependencies": {
-		"@types/node": "^18.17.6",
+		"@types/node": "^18.17.9",
 		"prettier": "3.0.2",
 		"regenerator-runtime": "^0.14.0",
 		"rimraf": "^5.0.1",
