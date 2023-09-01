@@ -43,6 +43,7 @@ export default defineConfig(({ command, mode }) => {
 			critical({
 				criticalUrl: primarySiteUrl,
 				criticalBase: "./web/dist/criticalcss/",
+				// add any pages that should be pre-rendered here
 				criticalPages: [{ uri: "/", template: "index" }],
 				criticalConfig: {
 					extract: true,
