@@ -24,7 +24,7 @@
 		"rimraf": "^5.0.1",
 		"rollup-plugin-critical": "^1.0.12",
 		"sass": "^1.66.1",
-		"terser": "^5.19.3",
+		"terser": "^5.19.4",
 		"typescript": "^5.2.2",
 		"vite": "^4.4.9",
 		"vite-plugin-compression": "^0.5.1",
