@@ -22,7 +22,7 @@
 ## Turbostart 🚀
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/smonist/craft-vite-starter/main/init.sh)
+bash <(curl -s https://raw.githubusercontent.com/szenario-fordesigners/craft-vite-starter/main/init.sh)
 ```
 
 ## Quickstart
