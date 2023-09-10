@@ -11,7 +11,7 @@ install:
 	cp patches/config.node.yaml .ddev/config.node.yaml
 	
 	@echo "cleaning project..."
-	rm -rf patches .all-contributorsrc header.png szenario-logo.svg Makefile renovate.json
+	rm -rf patches .all-contributorsrc header.png init.sh Makefile patches renovate.json szenario-logo.svg
 	mv Makefile.default Makefile
 	ddev restart
 	ddev yarn install
