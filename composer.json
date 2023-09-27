@@ -18,7 +18,7 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "^4.5.5",
+    "craftcms/cms": "^4.5.6",
     "nystudio107/craft-vite": "^4.0.6",
     "vlucas/phpdotenv": "^5.5.0"
   },
