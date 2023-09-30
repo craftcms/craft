@@ -6,6 +6,6 @@
     "patches/docker-compose.vite.yaml"
   ],
   "schedule": [
-    "before 2am"
+    "before 2am every saturday"
   ]
 }
