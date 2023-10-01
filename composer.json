@@ -18,12 +18,14 @@
     "docs": "https://craftcms.com/docs",
     "rss": "https://craftcms.com/changelog.rss"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "craftcms/cms": "^4.4.0",
+    "craftcms/cms": "5.0.x-dev as 5.0.0-alpha",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
-    "craftcms/generator": "^1.3.0",
+    "craftcms/generator": "2.0.x-dev",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
@@ -39,7 +41,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.0.2"
+      "php": "8.2"
     }
   },
   "scripts": {
