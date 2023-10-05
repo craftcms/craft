@@ -2,7 +2,7 @@
 	"name": "craft-ddev",
 	"version": "1.0.0",
 	"description": "Craft CMS 4 + DDEV + Vite Blueprint",
-	"main": "vite.config.js",
+	"main": "vite.config.ts",
 	"scripts": {
 		"dev": "rimraf ./web/dist && node viteDevServerToggle.js 1 && vite --host",
 		"build": "node viteDevServerToggle.js 0 && tsc && vite build"
