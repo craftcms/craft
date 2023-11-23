@@ -1,8 +1,8 @@
 /**
  * toggle USE_VITE_DEV_SERVER environment variable based on which npm script is running
  * */
-const fs = require("fs");
-const os = require("os");
+import fs from "fs";
+import os from "os";
 
 function setEnvValue(key, value) {
 	// read file from hdd & split if from a linebreak to an array
