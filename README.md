@@ -10,7 +10,7 @@ __Psst!__ Looking for the Craft source code? Need to file a bug report or featur
 
 ---
 
-:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try them out for yourself.
+:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try it out for yourself.
 
 :construction_worker_woman: **If you are eager to start building:** You’re in exactly the right place!
 
