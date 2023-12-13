@@ -2,7 +2,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cms": "5.0.x-dev as 5.0.0-alpha",
+    "craftcms/cms": "^5.0.0-alpha.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
