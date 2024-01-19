@@ -16,9 +16,12 @@ __Psst!__ Looking for the Craft source code? Need to file a bug report or featur
 
 ## Getting Started
 
+> [!WARNING]  
+> These instructions are specific to prerelease versions of Craft 5! If you want to install the latest 4.x release, head back to the [`main` branch](https://github.com/craftcms/craft).
+
 This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
 
-> **Note**  
+> [!TIP]  
 > Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
 >
 > You can also find these instructions (and some other helpful tips) in [the documentation](https://craftcms.com/docs/4.x/installation.html).
@@ -34,10 +37,10 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
     ```
 3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
     ```bash
-    ddev config --project-type=craftcms --docroot=web --create-docroot
+    ddev config --project-type=craftcms --docroot=web --create-docroot --php-version=8.2
 
     # Use this package as a starting point:
-    ddev composer create -y --no-scripts craftcms/craft
+    ddev composer create -y --no-scripts craftcms/craft=^5.0.0-alpha.1
 
     # Run the Craft CMS installer (use all defaults):
     ddev craft install
