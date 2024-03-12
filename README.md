@@ -17,7 +17,7 @@ __Psst!__ Looking for the Craft source code? Need to file a bug report or featur
 ## Getting Started
 
 > [!WARNING]  
-> These instructions are specific to prerelease versions of Craft 5! If you want to install the latest 4.x release, head back to the [`main` branch](https://github.com/craftcms/craft).
+> These instructions are specific to prerelease versions of Craft 5! If you want to install the latest 4.x release, head back to the [`4.x` branch](https://github.com/craftcms/craft).
 
 This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
 
