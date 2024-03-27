@@ -4,7 +4,7 @@
 
 [Craft](https://craftcms.com/) is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
 
-In technical terms, it’s a self-hosted PHP 8 application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
+In technical terms, it’s a self-hosted PHP application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
 
 __Psst!__ Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
 
@@ -16,15 +16,12 @@ __Psst!__ Looking for the Craft source code? Need to file a bug report or featur
 
 ## Getting Started
 
-> [!WARNING]  
-> These instructions are specific to prerelease versions of Craft 5! If you want to install the latest 4.x release, head back to the [`4.x` branch](https://github.com/craftcms/craft).
-
-This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
+This repository is a bare-bones [Composer](https://getcomposer.org/) “project”, intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
 
 > [!TIP]  
 > Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
 >
-> You can also find these instructions (and some other helpful tips) in [the documentation](https://craftcms.com/docs/4.x/installation.html).
+> You can also find these instructions (and some other helpful tips) in [the documentation](https://craftcms.com/docs/5.x/install.html).
 
 The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment.
 
@@ -40,17 +37,17 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
     ddev config --project-type=craftcms --docroot=web --create-docroot --php-version=8.2
 
     # Use this package as a starting point:
-    ddev composer create -y --no-scripts craftcms/craft=^5.0.0-beta.1
+    ddev composer create -y --no-scripts craftcms/craft=^5.0.0
 
     # Run the Craft CMS installer (use all defaults):
     ddev craft install
     ```
 4. Run `ddev launch` to open the project in your browser.
 
-Craft’s [control panel](https://craftcms.com/docs/4.x/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/install/control-panel.html), or dive right in on modeling your own content:
-- :card_file_box: [Elements](https://craftcms.com/docs/4.x/elements.html): Learn about Craft’s core content types, and how to customize them.
-- :triangular_ruler: [Fields](https://craftcms.com/docs/4.x/fields.html): Create precisely the data structure and authoring experience you need.
-- :pencil2: [Templating](https://craftcms.com/docs/4.x/dev/twig-primer.html): Start using your data in a totally custom front-end.
+Craft’s [control panel](https://craftcms.com/docs/5.x/system/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/install/control-panel.html), or dive right in on modeling your own content:
+- :card_file_box: [Elements](https://craftcms.com/docs/5.x/system/elements.html): Learn about Craft’s core content types, and how to customize them.
+- :triangular_ruler: [Fields](https://craftcms.com/docs/5.x/system/fields.html): Create precisely the data structure and authoring experience you need.
+- :pencil2: [Templating](https://craftcms.com/docs/5.x/development/twig.html): Start using your data in a totally custom front-end.
 
 ## Resources
 
