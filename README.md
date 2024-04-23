@@ -37,7 +37,7 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
     ddev config --project-type=craftcms --docroot=web --create-docroot --php-version=8.2
 
     # Use this package as a starting point:
-    ddev composer create -y --no-scripts craftcms/craft=^5.0.0
+    ddev composer create --no-interaction --no-scripts craftcms/craft=^5.0.0
 
     # Run the Craft CMS installer (use all defaults):
     ddev craft install
