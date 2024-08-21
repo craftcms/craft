@@ -34,7 +34,7 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
     ```
 3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
     ```bash
-    ddev config --project-type=craftcms --docroot=web --create-docroot --php-version=8.2
+    ddev config --project-type=craftcms --docroot=web
 
     # Use this package as a starting point:
     ddev composer create -y --no-scripts craftcms/craft
