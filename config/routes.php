@@ -6,7 +6,7 @@
  * to routes defined in Settings → Routes.
  *
  * Read all about Craft’s routing behavior, here:
- * https://craftcms.com/docs/4.x/routing.html
+ * https://craftcms.com/docs/5.x/system/routing.html
  */
 
 return [];
