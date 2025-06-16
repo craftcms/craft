@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <style>
+        html,
+        body {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: hsl(212, 60%, 97%);
+            color: hsl(209, 18%, 30%);
+            display: flex;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 24px;
+            font-size: 1em;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.4em;
+            margin-bottom: 1.4em;
+        }
+
+        ul {
+            line-height: 1.3em;
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.35em;
+        }
+
+        a {
+            color: #0B69A3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .go {
+            color: #0B69A3;
+        }
+
+        .go:after {
+            padding-left: 4px;
+            content: '→';
+            text-decoration: none !important;
+        }
+
+        small {
+            color: hsl(211, 11%, 59%);
+        }
+
+        code {
+            display: inline-block;
+            color: #EF4E4E;
+            padding: 0 2px;
+            background: hsl(212, 60%, 97%);
+            border-radius: 3px;
+            line-height: 1.3;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        #container {
+            flex-grow: 1;
+        }
+
+        #modal {
+            background: #fff;
+        }
+
+        #aside {
+            background: hsl(212, 60%, 97%);
+        }
+
+        .content {
+            padding: 35px;
+            padding-left: calc(35px + env(safe-area-inset-left));
+            padding-right: calc(35px + env(safe-area-inset-right));
+        }
+
+        @media (min-width:768px) {
+            #modal {
+                display: flex;
+            }
+
+            #main {
+                width: 50%;
+                overflow: auto;
+            }
+
+            #aside {
+                width: 50%;
+                overflow: auto;
+            }
+        }
+
+        @media (min-width:768px) and (min-height: 376px) {
+            body {
+                background-color: hsl(212, 50%, 93%);
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            #container {
+                display: flex;
+                padding: 24px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #modal {
+                height: 100%;
+                max-width: 800px;
+                max-height: 525px;
+                border-radius: 4px;
+                overflow: auto;
+                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+            }
+
+            #aside {
+                overflow: auto;
+            }
+        }
+
+    </style>
+</head>
+<body class="ltr">
+<div id="container">
+    <div id="modal">
+        <div id="main">
+            <div class="content">
+                <h1>Welcome</h1>
+                <p>Thanks for installing Craft CMS!</p>
+                <p>You’re looking at the <code>index.twig</code> template file located in your
+                    <code>templates/</code> folder. Once you’re ready to start building out your site’s
+                    front end, you can replace this with something custom.</p>
+                <p>If you’re new to Craft CMS, take some time to check out the resources on the right
+                    when you get a chance&mdash;especially
+                    <a href="https://craftcms.com/discord" target="_blank">Discord</a>
+                    and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
+                    The Craft community is full of smart, friendly, and helpful people!</p>
+                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your control panel</a></span></p>
+            </div>
+        </div>
+        <div id="aside">
+            <div class="content">
+                <h2>Popular Resources</h2>
+                <ul>
+                    <li><a href="https://craftcms.com/docs/getting-started-tutorial/" target="_blank">Tutorial</a><br><small>Learn the basics.</small></li>
+                    <li><a href="https://craftcms.com/docs/5.x/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
+                    <li><a href="https://craftcms.com/guides" target="_blank">Knowledge Base</a><br><small>Find answers to common problems.</small></li>
+                    <li><a href="https://craftcms.com/newsletter/subscribe" target="_blank">Newsletter</a><br><small>Get official news and community updates.</small></li>
+                    <li><a href="https://craftcms.com/events" target="_blank">Events</a><br><small>Upcoming community events.</small></li>
+                    <li><a href="https://craftcms.com/discord" target="_blank">Discord</a><br><small>Meet the community.</small></li>
+                    <li><a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a><br><small>Get help and help others.</small></li>
+                    <li><a href="https://craftquest.io/" target="_blank">CraftQuest</a><br><small>Watch unlimited video lessons and courses.</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
