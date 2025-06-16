@@ -23,7 +23,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.2",
-        "craftcms/cms": "dev-main",
+        "craftcms/cms": "6.x-dev",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
