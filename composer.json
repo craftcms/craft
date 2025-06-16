@@ -21,6 +21,12 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/craftcms/cms-internal"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "craftcms/cms": "6.x-dev",
