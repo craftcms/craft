@@ -25,11 +25,12 @@
         {
             "type": "vcs",
             "url": "https://github.com/craftcms/cms-internal"
-        }
+        },
+        {"type": "composer", "url": "https://repo.packagist.com/craftcms/"}
     ],
     "require": {
         "php": "^8.2",
-        "craftcms/cms": "6.x-dev",
+        "craftcms/cms": "dev-6.x-internal",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
@@ -90,8 +91,10 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
+            "craftcms/plugin-installer": true,
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "yiisoft/yii2-composer": true
         }
     },
     "minimum-stability": "stable",
