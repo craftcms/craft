@@ -22,7 +22,7 @@
   },
   "scripts": {
     "post-root-package-install": [
-      "@php scripts/post-root-package-install.php"
+      "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
   }
 }

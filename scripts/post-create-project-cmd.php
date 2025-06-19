@@ -9,3 +9,6 @@ if (file_exists('.env')) {
     copy($envFile, '.env');
     echo "Copied {$envFile} to .env\n";
 }
+
+unlink('composer.json');
+rename('composer.json.default', 'composer.json');
