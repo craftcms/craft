@@ -30,7 +30,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "craftcms/cms": "dev-6.x-internal",
+        "craftcms/cms": "dev-feature/laravel-ci",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
@@ -97,6 +97,6 @@
             "yiisoft/yii2-composer": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
