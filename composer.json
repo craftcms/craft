@@ -30,7 +30,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "craftcms/cms": "dev-feature/laravel-package",
+        "craftcms/cms": "dev-6.x-internal",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
