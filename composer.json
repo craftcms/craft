@@ -29,12 +29,13 @@
         {"type": "composer", "url": "https://repo.packagist.com/craftcms/"}
     ],
     "require": {
-        "php": "^8.2",
-        "craftcms/cms": "dev-6.x-internal",
+        "php": "^8.4",
+        "craftcms/cms": "6.x-dev as 5.8.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
+        "craftcms/generator": "3.x-dev",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.13",
