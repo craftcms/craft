@@ -2,13 +2,6 @@
     "$schema": "https://getcomposer.org/schema.json",
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/craftcms/cms-internal"
-        },
-        {"type": "composer", "url": "https://repo.packagist.com/craftcms/"}
-    ],
     "require": {
         "php": "^8.4",
         "craftcms/cms": "6.x-dev as 5.8.0",
