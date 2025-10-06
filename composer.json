@@ -24,6 +24,7 @@
     "require": {
         "php": "^8.4",
         "craftcms/cms": "6.x-dev as 5.8.0",
+        "craftcms/yii2-adapter": "6.x-dev as 5.8.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
