@@ -325,9 +325,9 @@
             <ul>
                 <li>Craft CMS {{ craft.version }}</li>
                 {% if currentUser %}
-                    <li><a href="{{ cpUrl('login') }}">Log in</a></li>
-                {% else %}
                     <li><a href="{{ cpUrl('users/me') }}">My Account</a></li>
+                {% else %}
+                    <li><a href="{{ cpUrl('login') }}">Log in</a></li>
                 {% endif %}
             </ul>
         </div>
