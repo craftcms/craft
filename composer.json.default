@@ -1,28 +1,9 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "craftcms/craft",
-    "description": "Craft CMS",
-    "keywords": [
-        "craft",
-        "cms",
-        "craftcms",
-        "project"
-    ],
-    "license": "0BSD",
-    "homepage": "https://craftcms.com/",
-    "type": "project",
-    "support": {
-        "email": "support@craftcms.com",
-        "issues": "https://github.com/craftcms/cms/issues",
-        "forum": "https://craftcms.stackexchange.com/",
-        "source": "https://github.com/craftcms/cms",
-        "docs": "https://craftcms.com/docs",
-        "rss": "https://craftcms.com/changelog.rss"
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^8.5",
+        "php": "^8.4",
         "craftcms/cms": "6.x-dev as 5.8.0",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0"
@@ -50,26 +31,9 @@
         }
     },
     "scripts": {
-        "setup": [
-            "composer install",
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan key:generate",
-            "@php artisan migrate --force",
-            "npm install --ignore-scripts",
-            "npm run build"
-        ],
-        "dev": [
-            "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1 --timeout=0\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
-        ],
-        "test": [
-            "@php artisan config:clear --ansi @no_additional_args",
-            "@php artisan test"
-        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi",
-            "@php artisan craft:setup:publish --ansi"
+            "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -79,12 +43,18 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@php -r \"unlink('composer.json');\"",
-            "@php -r \"rename('composer.json.default', 'composer.json');\"",
             "@php artisan craft:install"
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1 --timeout=0\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
+        ],
+        "test": [
+            "@php artisan config:clear --ansi @no_additional_args",
+            "@php artisan test"
         ]
     },
     "extra": {
@@ -99,7 +69,8 @@
         "allow-plugins": {
             "craftcms/plugin-installer": true,
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "yiisoft/yii2-composer": true
         }
     }
 }
