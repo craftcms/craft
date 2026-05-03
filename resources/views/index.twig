@@ -7,20 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
     <style>
-        html,
-        body {
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-            height: 100%;
-            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        /**
+         * Variables + Configuration
+         */
+
+        :root {
+            --spacing-gutter: 25px;
+            --spacing-thin: 16px;
+
+            --color-text: hsl(209, 18%, 30%);
+            --color-ground: hsl(200, 18%, 98%);
+            --color-pane: hsl(212, 50%, 96%);
+            --color-attn: hsl(203, 87%, 34%);
+            --color-dull: hsl(211, 11%, 59%);
+            --color-tint: hsl(200, 50%, 20%, 0.05);
         }
 
+        /**
+         * Base Styles
+         */
+
+        html,
+        body {}
+
         body {
+            background-color: var(--color-pane);
+            color: var(--color-text);
+            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
             margin: 0;
             padding: 0;
-            background-color: hsl(212, 60%, 97%);
-            color: hsl(209, 18%, 30%);
-            display: flex;
         }
 
         h1 {
@@ -37,8 +53,12 @@
         }
 
         p {
-            line-height: 1.4em;
-            margin-bottom: 1.4em;
+            line-height: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
         }
 
         ul {
@@ -52,16 +72,13 @@
         }
 
         a {
-            color: #0B69A3;
-            text-decoration: none;
+            color: var(--color-attn);
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
+        a:hover {}
 
         .go {
-            color: #0B69A3;
+            color: var(--color-attn);
         }
 
         .go:after {
@@ -71,118 +88,248 @@
         }
 
         small {
-            color: hsl(211, 11%, 59%);
+            color: var(--color-dull);
         }
 
         code {
             display: inline-block;
             color: #EF4E4E;
-            padding: 0 2px;
-            background: hsl(212, 60%, 97%);
+            padding: 2px 4px 1px 4px;
+            background-color: var(--color-tint);
             border-radius: 3px;
             line-height: 1.3;
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-            font-size: 0.9em;
+            font-size: 0.85em;
+        }
+
+        /**
+         * Page Regions
+         */
+
+        .background {
+            background-image: url("{{ craftAsset('build/assets/installer-bg.png') }}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom: 50%;
         }
 
         #container {
-            flex-grow: 1;
+            box-sizing: border-box;
+            min-height: 100vh;
         }
 
         #modal {
-            background: #fff;
+            background: var(--color-ground);
+            box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
         }
 
+        #main {}
+
         #aside {
-            background: hsl(212, 60%, 97%);
+            box-sizing: border-box;
+            padding: var(--spacing-thin);
         }
 
         .content {
-            padding: 35px;
-            padding-left: calc(35px + env(safe-area-inset-left));
-            padding-right: calc(35px + env(safe-area-inset-right));
+            padding: var(--spacing-gutter);
+            padding-left: calc(var(--spacing-gutter) + env(safe-area-inset-left));
+            padding-right: calc(var(--spacing-gutter) + env(safe-area-inset-right));
         }
 
-        @media (min-width:768px) {
+        #aside .content {
+            background: var(--color-pane);
+        }
+
+        #main .content {}
+
+        #footer {
+            border-top: 2px solid var(--color-tint);
+            box-sizing: border-box;
+            color: var(--color-dull);
+            font-size: smaller;
+            padding: var(--spacing-thin);
+            width: 100%;
+        }
+
+        #footer ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #footer li {
+            margin: 0;
+            padding: 0;
+        }
+
+        #footer li:not(:last-child)::after {
+            content: '/';
+            margin: 0 1em;
+            opacity: 0.25;
+        }
+
+        #footer a {
+            color: inherit;
+        }
+
+        /**
+         * Larger Clients
+         */
+
+        @media (min-width: 600px) {
+            body {
+                position: relative;
+            }
+
+            .background {
+                /* This acts more like a full-screen background image at this scale... */
+                height: 100%;
+                left: 0;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+
+            #container {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                padding: 25% var(--spacing-gutter) var(--spacing-gutter) var(--spacing-gutter);
+                position: relative;
+            }
+
+            #modal {
+                max-width: 800px;
+                border-radius: 4px;
+                overflow: auto;
+            }
+        }
+
+        @media (min-width: 900px) {
+            :root {
+                --spacing-gutter: 35px;
+            }
+
+            #container {
+                padding-top: var(--spacing-gutter);
+            }
+
             #modal {
                 display: flex;
+                flex-wrap: wrap;
             }
 
             #main {
                 width: 50%;
-                overflow: auto;
             }
 
             #aside {
                 width: 50%;
-                overflow: auto;
             }
         }
 
-        @media (min-width:768px) and (min-height: 376px) {
-            body {
-                background-color: hsl(212, 50%, 93%);
-                background-image: url("{{ craftAsset('build/assets/installer-bg.png') }}");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
+        /**
+         * Dark Mode
+         */
 
-            #container {
-                display: flex;
-                padding: 24px;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #modal {
-                height: 100%;
-                max-width: 800px;
-                max-height: 525px;
-                border-radius: 4px;
-                overflow: auto;
-                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-            }
-
-            #aside {
-                overflow: auto;
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text: hsl(214, 100%, 97%);
+                --color-ground: hsl(222, 40%, 18%);
+                --color-pane: hsl(222, 40%, 22%);
+                --color-attn: hsl(225, 100%, 78%);
+                --color-dull: hsl(211, 11%, 65%);
+                --color-tint: hsl(200, 50%, 50%, 0.25);
             }
         }
-
     </style>
 </head>
 <body class="ltr">
+<div class="background"></div>
 <div id="container">
     <div id="modal">
         <div id="main">
             <div class="content">
-                <h1>Welcome</h1>
-                <p>Thanks for installing Craft CMS!</p>
-                <p>You’re looking at the <code>index.twig</code> template file located in your
-                    <code>templates/</code> folder. Once you’re ready to start building out your site’s
-                    front end, you can replace this with something custom.</p>
-                <p>If you’re new to Craft CMS, take some time to check out the resources on the right
-                    when you get a chance&mdash;especially
-                    <a href="https://craftcms.com/discord" target="_blank">Discord</a>
-                    and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
-                    The Craft community is full of smart, friendly, and helpful people!</p>
+                <h1>Welcome!</h1>
+                <p>Thanks for installing Craft CMS.</p>
+                <p>You’re looking at the <code>index.twig</code> template located in your <code>resources/views/</code> folder. Once you’re ready to start building out your site’s front end, you can replace this with something custom.</p>
+                <p>If you’re new to Craft CMS, take a moment to explore some of the resources in the next panel&mdash;especially <a href="https://craftcms.com/discord" target="_blank">Discord</a> and <a href="https://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>. The Craft community is full of smart, friendly, and helpful people!</p>
                 <p><span class="go"><a href="{{ cpUrl('') }}">Go to your control panel</a></span></p>
             </div>
         </div>
         <div id="aside">
             <div class="content">
                 <h2>Popular Resources</h2>
+
+                {% set resources = [
+                    {
+                        link: 'https://craftcms.com/docs/getting-started-tutorial/',
+                        text: 'Tutorial',
+                        description: 'Learn the basics',
+                    },
+                    {
+                        link: 'https://craftcms.com/docs/5.x/',
+                        text: 'Documentation',
+                        description: 'Read the official docs',
+                    },
+                    {
+                        link: 'https://craftcms.com/knowledge-base',
+                        text: 'Knowledge Base',
+                        description: 'Find answers to common problems',
+                    },
+                    {
+                        link: 'https://craftcms.com/newsletter/subscribe',
+                        text: 'Newsletter',
+                        description: 'Get official news and community updates',
+                    },
+                    {
+                        link: 'https://craftcms.com/events',
+                        text: 'Events',
+                        description: 'Meet our wonderful community',
+                    },
+                    {
+                        link: 'https://craftcms.com/discord',
+                        text: 'Discord',
+                        description: 'Chat with other Craft developers',
+                    },
+                    {
+                        link: 'https://craftcms.stackexchange.com/',
+                        text: 'Stack Exchange',
+                        description: 'Get help and help others',
+                    },
+                    {
+                        link: 'https://craftquest.io/',
+                        text: 'CraftQuest',
+                        description: 'Unlimited video lessons and courses',
+                    },
+                ] %}
+
                 <ul>
-                    <li><a href="https://craftcms.com/docs/getting-started-tutorial/" target="_blank">Tutorial</a><br><small>Learn the basics.</small></li>
-                    <li><a href="https://craftcms.com/docs/5.x/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
-                    <li><a href="https://craftcms.com/guides" target="_blank">Knowledge Base</a><br><small>Find answers to common problems.</small></li>
-                    <li><a href="https://craftcms.com/newsletter/subscribe" target="_blank">Newsletter</a><br><small>Get official news and community updates.</small></li>
-                    <li><a href="https://craftcms.com/events" target="_blank">Events</a><br><small>Upcoming community events.</small></li>
-                    <li><a href="https://craftcms.com/discord" target="_blank">Discord</a><br><small>Meet the community.</small></li>
-                    <li><a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a><br><small>Get help and help others.</small></li>
-                    <li><a href="https://craftquest.io/" target="_blank">CraftQuest</a><br><small>Watch unlimited video lessons and courses.</small></li>
+                    {% for resource in resources %}
+                        <li>
+                            <a href="{{ resource.link }}" target="_blank">{{ resource.text }}</a>
+                            <br>
+                            {% if resource.description %}
+                                <small>{{ resource.description }}</small>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
+        </div>
+        <div id="footer">
+            <ul>
+                <li>Craft CMS {{ craft.version }}</li>
+                {% if currentUser %}
+                    <li><a href="{{ cpUrl('login') }}">Log in</a></li>
+                {% else %}
+                    <li><a href="{{ cpUrl('users/me') }}">My Account</a></li>
+                {% endif %}
+            </ul>
         </div>
     </div>
 </div>
