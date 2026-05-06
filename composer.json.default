@@ -3,8 +3,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^8.4",
-        "craftcms/cms": "6.x-dev as 5.8.0",
+        "php": "^8.5",
+        "craftcms/cms": "^6.0.0",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0"
     },
