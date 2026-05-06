@@ -23,12 +23,11 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.5",
-        "craftcms/cms": "6.x-dev as 5.8.0",
+        "craftcms/cms": "^6.0.0",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0"
     },
     "require-dev": {
-        "craftcms/generator": "3.x-dev",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.5",
         "laravel/pao": "^1.0.6",
