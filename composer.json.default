@@ -9,7 +9,6 @@
         "laravel/tinker": "^3.0"
     },
     "require-dev": {
-        "craftcms/generator": "3.x-dev",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.5",
         "laravel/pao": "^1.0.6",
