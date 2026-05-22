@@ -38,9 +38,7 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\"",
-      "@php -r \"unlink('composer.json');\"",
-      "@php -r \"rename('composer.json.default', 'composer.json');\"",
+      "@php scripts/post-create-project-cmd.php",
       "@php craft install"
     ]
   }
