@@ -18,6 +18,7 @@
     "optimize-autoloader": true
   },
   "scripts": {
+    "post-update-cmd": "@php craft up",
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ]
