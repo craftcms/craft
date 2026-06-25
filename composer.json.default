@@ -5,7 +5,7 @@
     "require": {
         "php": "^8.5",
         "craftcms/cms": "^6.0.0",
-        "laravel/framework": "^13.0",
+        "laravel/framework": "^13.8",
         "laravel/tinker": "^3.0"
     },
     "require-dev": {
