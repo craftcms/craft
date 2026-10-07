@@ -44,10 +44,10 @@ return [
             'report' => false,
         ],
         // On-disk storage for publicly-accessible files:
-        'web' => [
+        'uploads' => [
             'driver' => 'local',
             'root' => public_path('uploads'),
-            'url' => rtrim(env('APP_URL', 'http://localhost'), '/').'/storage',
+            'url' => rtrim(env('APP_URL', 'http://localhost'), '/').'/uploads',
             'visibility' => 'public',
             'throw' => false,
             'report' => false,
