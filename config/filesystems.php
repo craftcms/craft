@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file has been adapted from Laravel’s default, for brevity.
  *
  * The original one can be found here:
@@ -11,7 +11,7 @@
  */
 
 return [
-    /*
+    /**
      * Each disk configuration is identified by a handle (the key). You will
      * reference these when creating asset volumes in Craft. Multiple asset
      * volumes can share a filesystem; you may also set a volume’s filesystem to
@@ -54,7 +54,7 @@ return [
         ],
     ],
 
-    /*
+    /**
      * If you need to store or manipulate files in custom application logic,
      * you can declare a “default” disk, which the app will use unless another
      * is specified:
@@ -76,7 +76,7 @@ return [
 
     'default' => env('FILESYSTEM_DISK', 'private'),
 
-    /*
+    /**
      * To keep uploaded content confined to system storage directories, you can
      * add mappings, here. When running the `storage:link` Artisan command,
      * Laravel creates a symbolic link from the *key* to the *value*.
