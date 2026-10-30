@@ -247,9 +247,17 @@
             }
         }
     </style>
+
+    {# Output any registered fragments: #}
+    {{ head() }}
+
 </head>
 <body class="ltr">
+
+{{ beginBody() }}
+
 <div class="background"></div>
+
 <div id="container">
     <div id="modal">
         <div id="main">
@@ -334,4 +342,7 @@
     </div>
 </div>
 </body>
+
+{{ endBody() }}
+
 </html>
