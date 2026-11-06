@@ -12,7 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // Verify forms by their Sec-Fetch-Site or Origin header instead of CSRF tokens,
+        // so pages with forms can be cached.
+        $middleware->preventRequestForgery(originOnly: true);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(
