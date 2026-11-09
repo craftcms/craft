@@ -12,7 +12,6 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        // Keep forms from forcing a session just to render a CSRF token.
         $middleware->preventRequestForgery(originOnly: true);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
