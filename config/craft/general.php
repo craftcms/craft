@@ -12,6 +12,12 @@
 use CraftCms\Cms\Config\GeneralConfig;
 
 return GeneralConfig::create()
+    // Allow changes to settings that are stored in project config (disable in production)
+    ->allowAdminChanges(env('ALLOW_ADMIN_CHANGES', true))
+    // Allow updates and plugin installs from the control panel (disable in production)
+    ->allowUpdates(env('ALLOW_UPDATES', true))
+    // Ask search engines not to index the site (enable outside of production)
+    ->disallowRobots(env('DISALLOW_ROBOTS', false))
     // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
     ->defaultWeekStartDay(1)
     // Preload Single entries as Twig variables
