@@ -13,9 +13,9 @@ use CraftCms\Cms\Config\GeneralConfig;
 
 return GeneralConfig::create()
     // Allow changes to settings that are stored in project config (disable in production)
-    ->allowAdminChanges(env('ALLOW_ADMIN_CHANGES', true))
+    ->allowAdminChanges(env('ALLOW_ADMIN_CHANGES', false))
     // Allow updates and plugin installs from the control panel (disable in production)
-    ->allowUpdates(env('ALLOW_UPDATES', true))
+    ->allowUpdates(env('ALLOW_UPDATES', false))
     // Ask search engines not to index the site (enable outside of production)
     ->disallowRobots(env('DISALLOW_ROBOTS', false))
     // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
